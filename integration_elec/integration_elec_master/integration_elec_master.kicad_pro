@@ -621,6 +621,14 @@
     [
       "3e5f576e-441a-42f8-995d-ab5456f908b5",
       "MCU"
+    ],
+    [
+      "ef54b424-e17d-48b3-87ed-158617f93c7a",
+      "DEBUG_USB"
+    ],
+    [
+      "b6550ae5-c9f3-4780-b288-b1ff08ddf5fe",
+      "REGULATOR"
     ]
   ],
   "text_variables": {}
