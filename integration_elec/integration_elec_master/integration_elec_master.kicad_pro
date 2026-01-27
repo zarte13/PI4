@@ -613,6 +613,14 @@
     [
       "7d904e0d-c2b1-4329-81a9-fc34d181a4fe",
       "Root"
+    ],
+    [
+      "53810e40-2580-4e56-a6c6-cf1eae4bc5f8",
+      "XBEE"
+    ],
+    [
+      "3e5f576e-441a-42f8-995d-ab5456f908b5",
+      "MCU"
     ]
   ],
   "text_variables": {}
