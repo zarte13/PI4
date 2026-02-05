@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TFT Screen")(type "KiCad")(uri "C:/PI4/PI4/integration_elec/SYMBOLS/TFT Screen.kicad_sym")(options "")(descr ""))
+)
