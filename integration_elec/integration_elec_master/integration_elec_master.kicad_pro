@@ -629,6 +629,10 @@
     [
       "b6550ae5-c9f3-4780-b288-b1ff08ddf5fe",
       "REGULATOR"
+    ],
+    [
+      "38a729b1-3154-46e9-b83e-478314d9098f",
+      "TFT_SCREEN"
     ]
   ],
   "text_variables": {}
