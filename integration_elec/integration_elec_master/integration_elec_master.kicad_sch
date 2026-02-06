@@ -12,7 +12,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
 			(type solid)
@@ -21,8 +20,8 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "38a729b1-3154-46e9-b83e-478314d9098f")
-		(property "Sheetname" "TFT_SCREEN"
-			(at 63.5 121.2084 0)
+		(property "Sheetname" "TFT_SCREEN AND JOYSTICK"
+			(at 63.5 121.158 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30,7 +29,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "TFT_SCREEN.kicad_sch"
+		(property "Sheetfile" "TFT_SCREEN AND JOYSTICK.kicad_sch"
 			(at 63.5 147.9046 0)
 			(effects
 				(font
