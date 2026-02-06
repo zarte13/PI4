@@ -2302,6 +2302,16 @@
 		)
 		(uuid "98009850-f91e-4caf-ba55-f36635c1ce32")
 	)
+	(text "PULL UP PC8 PC9\n\n"
+		(exclude_from_sim no)
+		(at 80.772 115.824 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b3c71096-d278-4130-954a-024477784459")
+	)
 	(junction
 		(at 158.75 46.99)
 		(diameter 0)
@@ -2486,6 +2496,15 @@
 		(uuid "0eeb086e-c892-4d44-9912-55ef7307a6d1")
 	)
 	(bus_entry
+		(at 30.48 143.51)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eb289dd-03d1-449a-b036-b13438c8494e")
+	)
+	(bus_entry
 		(at 30.48 152.4)
 		(size 2.54 2.54)
 		(stroke
@@ -2529,6 +2548,15 @@
 			(type default)
 		)
 		(uuid "4a4eea3b-c0f0-4f71-85d1-ba0b563b1c71")
+	)
+	(bus_entry
+		(at 30.48 140.97)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56f7e849-a8d6-4c9d-b07a-c49468f6b398")
 	)
 	(bus_entry
 		(at 30.48 162.56)
@@ -2630,7 +2658,7 @@
 		(uuid "ab646f59-670c-40da-b894-fe9b15e2d36d")
 	)
 	(bus_entry
-		(at 30.48 140.97)
+		(at 30.48 135.89)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2639,7 +2667,7 @@
 		(uuid "afa69f58-57fa-44ca-8b16-e4a5e45617be")
 	)
 	(bus_entry
-		(at 30.48 143.51)
+		(at 30.48 138.43)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2819,6 +2847,16 @@
 			(type default)
 		)
 		(uuid "0f70aa24-09ac-4b44-bcca-0dcc1f7d10b7")
+	)
+	(bus
+		(pts
+			(xy 30.48 138.43) (xy 30.48 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11344bf2-42a2-4ce7-ab00-ee708f081762")
 	)
 	(wire
 		(pts
@@ -3310,6 +3348,16 @@
 		)
 		(uuid "5e41c401-d3ef-4c9c-8b7a-b5f1186d2720")
 	)
+	(bus
+		(pts
+			(xy 30.48 140.97) (xy 30.48 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5eaacc66-c1b5-455e-883e-fbb462c045de")
+	)
 	(wire
 		(pts
 			(xy 41.91 81.28) (xy 41.91 83.82)
@@ -3422,7 +3470,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 146.05) (xy 38.1 146.05)
+			(xy 33.02 140.97) (xy 38.1 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3630,6 +3678,16 @@
 		)
 		(uuid "8a5d641b-bced-4b49-a4ee-29e48817ee97")
 	)
+	(wire
+		(pts
+			(xy 102.87 116.84) (xy 146.05 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e66306d-1607-43d2-83dc-3b2f78a6a016")
+	)
 	(bus
 		(pts
 			(xy 30.48 162.56) (xy 30.48 165.1)
@@ -3742,7 +3800,7 @@
 	)
 	(bus
 		(pts
-			(xy 27.94 140.97) (xy 30.48 140.97)
+			(xy 27.94 135.89) (xy 30.48 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3779,6 +3837,16 @@
 			(type default)
 		)
 		(uuid "a8133b7a-913b-426e-84dc-47ae3789cf9b")
+	)
+	(wire
+		(pts
+			(xy 102.87 114.3) (xy 146.05 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa4b6701-87ec-4951-addc-bffe2b40d21a")
 	)
 	(wire
 		(pts
@@ -3892,7 +3960,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 143.51) (xy 38.1 143.51)
+			(xy 33.02 138.43) (xy 38.1 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3952,7 +4020,7 @@
 	)
 	(bus
 		(pts
-			(xy 30.48 140.97) (xy 30.48 143.51)
+			(xy 30.48 135.89) (xy 30.48 138.43)
 		)
 		(stroke
 			(width 0)
@@ -3969,6 +4037,16 @@
 			(type default)
 		)
 		(uuid "c31cfe94-4680-4df9-b932-a5f074dee14f")
+	)
+	(wire
+		(pts
+			(xy 33.02 146.05) (xy 38.1 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c34a8533-2259-46a6-ad27-e21622bc9243")
 	)
 	(wire
 		(pts
@@ -4089,6 +4167,16 @@
 			(type default)
 		)
 		(uuid "d72e03d2-5416-4e41-be04-d4853c75ccd6")
+	)
+	(wire
+		(pts
+			(xy 33.02 143.51) (xy 38.1 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d74bfd6d-1412-4c10-9f51-f47d81eee5d7")
 	)
 	(wire
 		(pts
@@ -4341,7 +4429,7 @@
 		(uuid "19949ad7-320e-403e-96f0-a8c9b190137e")
 	)
 	(label "X_VALUE"
-		(at 38.1 143.51 0)
+		(at 38.1 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4411,7 +4499,7 @@
 		(uuid "3f4988ac-d05a-4735-9fe4-f737f8e4ef45")
 	)
 	(label "Y_VALUE"
-		(at 38.1 146.05 0)
+		(at 38.1 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4549,6 +4637,16 @@
 			(justify left bottom)
 		)
 		(uuid "989536d2-08b4-4f41-a1e4-027db1e52a1a")
+	)
+	(label "VALVE1_ON"
+		(at 102.87 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "995c9cbc-ccd5-408b-8e13-bd3dbe1232aa")
 	)
 	(label "RF.XBEE_LED"
 		(at 35.56 165.1 0)
@@ -4710,6 +4808,16 @@
 		)
 		(uuid "e5088198-e1bd-4437-ab30-6a602affb104")
 	)
+	(label "VALVE2_ON"
+		(at 38.1 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e821adac-892d-49c1-96c0-de0fe3ca6b92")
+	)
 	(label "USB_VBUS"
 		(at 219.71 127 0)
 		(effects
@@ -4730,6 +4838,16 @@
 		)
 		(uuid "ea2ef82d-543a-47f0-8683-e137665ca2ad")
 	)
+	(label "VALVE2_ON"
+		(at 102.87 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ebaf5422-8dfe-497c-be7c-bc44cb52c9f4")
+	)
 	(label "DEBUG_RESET"
 		(at 74.93 50.8 90)
 		(effects
@@ -4749,6 +4867,16 @@
 			(justify left bottom)
 		)
 		(uuid "f11bbfcb-13af-4ac2-bfed-2a216aaa292e")
+	)
+	(label "VALVE1_ON"
+		(at 38.1 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1982019-dc07-43f1-98f4-cec8474e8eab")
 	)
 	(label "USB_D+"
 		(at 219.71 132.08 0)
@@ -4866,7 +4994,7 @@
 	)
 	(hierarchical_label "{JOYSTICK}"
 		(shape bidirectional)
-		(at 27.94 140.97 180)
+		(at 27.94 135.89 180)
 		(effects
 			(font
 				(size 1.27 1.27)
