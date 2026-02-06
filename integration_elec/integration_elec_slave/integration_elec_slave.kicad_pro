@@ -629,6 +629,14 @@
     [
       "408e7880-979e-40de-9541-c2200e8ca76c",
       "Regulator"
+    ],
+    [
+      "72fa526e-6791-4af4-9337-9235f1a1456e",
+      "ADC"
+    ],
+    [
+      "1878c7a2-d78d-490f-bda1-eeca2619eaee",
+      "CONNECTORS"
     ]
   ],
   "text_variables": {}
