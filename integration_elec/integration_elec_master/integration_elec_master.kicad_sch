@@ -6,6 +6,47 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
+		(at 63.5 121.92)
+		(size 60.96 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "38a729b1-3154-46e9-b83e-478314d9098f")
+		(property "Sheetname" "TFT_SCREEN AND JOYSTICK"
+			(at 63.5 121.158 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "TFT_SCREEN AND JOYSTICK.kicad_sch"
+			(at 63.5 147.9046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "integration_elec_master"
+				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 62.23 80.01)
 		(size 62.23 26.67)
 		(exclude_from_sim no)
