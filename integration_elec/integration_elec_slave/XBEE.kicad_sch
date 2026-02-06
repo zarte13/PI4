@@ -2360,7 +2360,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c3906fa")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 154.305 80.1878 0)
 			(effects
 				(font
@@ -2492,7 +2492,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -2507,7 +2507,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c39072c")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR04"
 			(at 125.73 78.74 0)
 			(effects
 				(font
@@ -2557,7 +2557,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR011")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2572,7 +2572,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c390734")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR05"
 			(at 125.73 121.92 0)
 			(effects
 				(font
@@ -2622,7 +2622,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR017")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -2637,7 +2637,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c39074f")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR01"
 			(at 80.01 101.6 0)
 			(effects
 				(font
@@ -2687,7 +2687,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR015")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2702,7 +2702,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c390761")
-		(property "Reference" "C17"
+		(property "Reference" "C3"
 			(at 103.0732 111.6584 0)
 			(effects
 				(font
@@ -2783,7 +2783,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "C17")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -2798,7 +2798,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c390767")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR03"
 			(at 105.41 121.92 0)
 			(effects
 				(font
@@ -2848,7 +2848,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR016")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2863,7 +2863,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c3fa633")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR06"
 			(at 179.07 81.28 0)
 			(effects
 				(font
@@ -2913,7 +2913,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR012")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -2928,7 +2928,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c40fb17")
-		(property "Reference" "R4"
+		(property "Reference" "R2"
 			(at 191.77 88.9 90)
 			(effects
 				(font
@@ -3007,7 +3007,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "R4")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -3022,7 +3022,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d869dc0")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR09"
 			(at 234.95 134.62 0)
 			(effects
 				(font
@@ -3072,7 +3072,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR018")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -3087,7 +3087,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d869dc9")
-		(property "Reference" "R5"
+		(property "Reference" "R4"
 			(at 239.395 102.87 0)
 			(effects
 				(font
@@ -3168,7 +3168,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "R5")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -3183,7 +3183,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d869ddb")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR08"
 			(at 234.95 93.98 0)
 			(effects
 				(font
@@ -3233,7 +3233,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR014")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -3441,7 +3441,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005da3adc2")
-		(property "Reference" "R34"
+		(property "Reference" "R3"
 			(at 223.52 125.73 90)
 			(effects
 				(font
@@ -3520,7 +3520,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "R34")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3535,7 +3535,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005da414c2")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR07"
 			(at 222.25 134.62 0)
 			(effects
 				(font
@@ -3585,7 +3585,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR0101")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -3600,7 +3600,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "062825e5-e238-4aa7-a9ff-e692f9c604f0")
-		(property "Reference" "R58"
+		(property "Reference" "R1"
 			(at 182.245 80.645 0)
 			(effects
 				(font
@@ -3679,7 +3679,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "R58")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -3694,7 +3694,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "717dac79-a876-48a0-83ee-0e090b257a61")
-		(property "Reference" "C16"
+		(property "Reference" "C5"
 			(at 120.65 83.82 0)
 			(effects
 				(font
@@ -3775,7 +3775,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "C16")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -3790,7 +3790,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9e5744d7-9c3c-4941-98ff-80cde7233ffb")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR02"
 			(at 87.63 93.98 0)
 			(effects
 				(font
@@ -3840,7 +3840,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "#PWR013")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -3855,7 +3855,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9f044d03-1f6e-4d59-95c4-a45be21fda82")
-		(property "Reference" "C15"
+		(property "Reference" "C4"
 			(at 113.2332 83.7184 0)
 			(effects
 				(font
@@ -3936,7 +3936,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "C15")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -3952,7 +3952,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b27df239-cb55-4ae1-a2fc-08f0dfd09cf4")
-		(property "Reference" "C13"
+		(property "Reference" "C1"
 			(at 90.17 81.2736 0)
 			(effects
 				(font
@@ -4033,7 +4033,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "C13")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4048,7 +4048,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b8f047ce-96be-4f30-832e-288b86a7942d")
-		(property "Reference" "C14"
+		(property "Reference" "C2"
 			(at 100.5332 83.7184 0)
 			(effects
 				(font
@@ -4129,7 +4129,7 @@
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/b0a0cc4c-fc88-458b-9c77-f065f39e4cf1"
-					(reference "C14")
+					(reference "C2")
 					(unit 1)
 				)
 			)

@@ -18,6 +18,26 @@
 	)
 	(bus
 		(pts
+			(xy 182.88 105.41) (xy 182.88 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0552ed0f-ee9e-4036-86d6-c49e5e493244")
+	)
+	(bus
+		(pts
+			(xy 242.57 119.38) (xy 242.57 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0579775d-7a45-4019-9772-4d00db47e954")
+	)
+	(bus
+		(pts
 			(xy 133.35 102.235) (xy 161.29 102.235)
 		)
 		(stroke
@@ -38,43 +58,23 @@
 	)
 	(bus
 		(pts
-			(xy 124.46 126.365) (xy 127 126.365)
+			(xy 194.31 105.41) (xy 194.31 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "11cab05e-583d-4bc4-8f84-598aa846b1e6")
+		(uuid "4b5baad1-ad98-450d-8394-c0e30f7d284e")
 	)
 	(bus
 		(pts
-			(xy 134.62 74.93) (xy 134.62 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20d0a4f6-e366-4ea4-90ba-304530459bda")
-	)
-	(bus
-		(pts
-			(xy 124.46 127) (xy 119.38 127)
+			(xy 119.38 127) (xy 127 127)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "5f4f4cf9-dfdd-434e-85e1-58c1760cfc6b")
-	)
-	(bus
-		(pts
-			(xy 135.89 74.93) (xy 134.62 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "663be8db-09a4-4c5b-805f-02d5d1acbe59")
 	)
 	(bus
 		(pts
@@ -88,7 +88,7 @@
 	)
 	(bus
 		(pts
-			(xy 134.62 72.39) (xy 121.92 72.39)
+			(xy 121.92 76.2) (xy 161.29 76.2)
 		)
 		(stroke
 			(width 0)
@@ -98,23 +98,23 @@
 	)
 	(bus
 		(pts
-			(xy 135.89 76.2) (xy 161.29 76.2)
+			(xy 200.66 119.38) (xy 242.57 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6d18fad7-87c4-492d-9513-f1b364df336e")
+		(uuid "dba7b3ae-8e61-4197-888e-6ccddfb2ef1a")
 	)
 	(bus
 		(pts
-			(xy 135.89 74.93) (xy 135.89 76.2)
+			(xy 200.66 127) (xy 200.66 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "726a11e4-9fc6-4173-b929-acca626717d4")
+		(uuid "e6e3d6cd-e021-47ae-980f-8089619df4a3")
 	)
 	(bus
 		(pts
@@ -128,17 +128,7 @@
 	)
 	(bus
 		(pts
-			(xy 124.46 126.365) (xy 124.46 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fab1a38c-a522-4e4e-a2b0-aa9dd2d031c8")
-	)
-	(bus
-		(pts
-			(xy 127 99.06) (xy 127 126.365)
+			(xy 127 99.06) (xy 127 127)
 		)
 		(stroke
 			(width 0)
@@ -148,7 +138,7 @@
 	)
 	(sheet
 		(at 233.68 69.85)
-		(size 43.815 23.495)
+		(size 43.815 21.59)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -163,7 +153,7 @@
 		)
 		(uuid "1878c7a2-d78d-490f-bda1-eeca2619eaee")
 		(property "Sheetname" "CONNECTORS"
-			(at 233.68 69.1384 0)
+			(at 232.9684 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -172,12 +162,22 @@
 			)
 		)
 		(property "Sheetfile" "CONNECTORS.kicad_sch"
-			(at 233.68 93.9296 0)
+			(at 278.0796 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "{SENSORS}" bidirectional
+			(at 242.57 91.44 270)
+			(uuid "a6204dc5-cf09-41a9-a9ee-1c87f04c6949")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -274,6 +274,26 @@
 				(justify right)
 			)
 		)
+		(pin "{I2C_BUS}" bidirectional
+			(at 194.31 127 90)
+			(uuid "ca798078-5f3e-4a6d-a616-afd7ef18b096")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{INTERRUPTS}" output
+			(at 182.88 127 90)
+			(uuid "4b75afd8-95c7-448d-86c2-2ec872eacff8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3"
@@ -283,7 +303,7 @@
 		)
 	)
 	(sheet
-		(at 80.645 55.88)
+		(at 80.645 59.69)
 		(size 41.275 42.545)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -299,7 +319,7 @@
 		)
 		(uuid "b0a0cc4c-fc88-458b-9c77-f065f39e4cf1")
 		(property "Sheetname" "XBEE"
-			(at 80.645 55.1684 0)
+			(at 80.645 58.9784 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -308,7 +328,7 @@
 			)
 		)
 		(property "Sheetfile" "XBEE.kicad_sch"
-			(at 80.645 99.0096 0)
+			(at 80.645 102.8196 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -317,7 +337,7 @@
 			)
 		)
 		(pin "RF{XBEE}" bidirectional
-			(at 121.92 72.39 0)
+			(at 121.92 76.2 0)
 			(uuid "793a8615-c78f-4dcb-bf9b-f92645c04257")
 			(effects
 				(font
@@ -388,9 +408,9 @@
 				(justify left)
 			)
 		)
-		(pin "{SD}" bidirectional
-			(at 161.29 88.265 180)
-			(uuid "416f7e0c-b1c4-4304-b0f1-8f8d17d6091d")
+		(pin "{USB}" bidirectional
+			(at 161.29 102.235 180)
+			(uuid "7d2fc45f-5eb0-4829-b840-7b7712f36ac6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -398,9 +418,19 @@
 				(justify left)
 			)
 		)
-		(pin "{USB}" bidirectional
-			(at 161.29 102.235 180)
-			(uuid "7d2fc45f-5eb0-4829-b840-7b7712f36ac6")
+		(pin "{I2C_BUS}" bidirectional
+			(at 194.31 105.41 270)
+			(uuid "b0aa9459-b684-45cf-a4c4-82fb7fccb7fb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{INTERRUPTS}" output
+			(at 182.88 105.41 270)
+			(uuid "6c2483fc-2926-4ae3-87e6-b6f675db8025")
 			(effects
 				(font
 					(size 1.27 1.27)

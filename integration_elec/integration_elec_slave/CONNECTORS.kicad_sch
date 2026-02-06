@@ -5,4 +5,74 @@
 	(uuid "06bbd07a-5cee-4651-8444-3c8a9198149d")
 	(paper "A4")
 	(lib_symbols)
+	(bus_entry
+		(at 40.64 60.96)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fae5be52-d713-42b9-ad21-d05406bc8bf1")
+	)
+	(bus
+		(pts
+			(xy 40.64 60.96) (xy 40.64 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dc75f5e-1708-4302-a18e-52754d1a6f7e")
+	)
+	(bus
+		(pts
+			(xy 40.64 59.69) (xy 40.64 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f493b2c-3831-489b-bfb9-83f455083c99")
+	)
+	(wire
+		(pts
+			(xy 43.18 63.5) (xy 45.72 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b951a9f-2155-4747-b426-c4abca2be301")
+	)
+	(bus
+		(pts
+			(xy 38.1 59.69) (xy 40.64 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff1799c-8076-4d44-955d-ab44a57fc02a")
+	)
+	(label "VO_LTF6800"
+		(at 45.72 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aac16a9f-a311-425c-bf4c-30c764ab73c3")
+	)
+	(hierarchical_label "{SENSORS}"
+		(shape bidirectional)
+		(at 38.1 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d333e32b-30dd-417c-9507-5dde5dc4bd18")
+	)
 )
