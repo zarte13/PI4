@@ -2451,6 +2451,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "1568-09032-ND"
+			(at 171.45 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "V1"
 			(uuid "39c79a0c-c4fc-43e9-abce-76bd75e3c1f7")
 		)
@@ -2812,6 +2821,15 @@
 				(hide yes)
 			)
 		)
+		(property "Digikey" "EG5637-ND"
+			(at 170.18 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "c1bb8940-6530-404a-96d4-6a3c12c4d481")
 		)
@@ -3074,6 +3092,15 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Digikey" "EG5637-ND"
+			(at 170.18 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)

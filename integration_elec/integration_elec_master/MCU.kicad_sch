@@ -2248,6 +2248,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "PC8 AND PC9 NEEDS TO BE PULL-DOWN\n"
+		(exclude_from_sim no)
+		(at 69.596 114.554 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0bd05068-8ca3-4b77-993f-942b35428ec6")
+	)
 	(text "RESET"
 		(exclude_from_sim no)
 		(at 38.1 52.705 0)
