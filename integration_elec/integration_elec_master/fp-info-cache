@@ -1,4 +1,4 @@
-27222558347960300
+27242034162602272
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -70343,12 +70343,89 @@ THT
 4
 2
 JOYSTICK
+CONN_3220-10-0100-00_CNC
+
+3220-10-0100-00 
+0
+10
+10
+JOYSTICK
+IND_BOURNS_SRR1280
+
+SRR1280-150M 
+0
+2
+2
+JOYSTICK
+SWITCH
+
+
+0
+2
+2
+JOYSTICK
+Sans titre
+
+
+0
+0
+0
+JOYSTICK
+Sans titre_1
+
+
+0
+0
+0
+JOYSTICK
+Sans titre_2
+
+
+0
+0
+0
+JOYSTICK
+Sans titre_3
+
+
+0
+0
+0
+JOYSTICK
+Sans titre_4
+
+
+0
+0
+0
+JOYSTICK
+WE-CBF_0805_W4.0
+
+
+0
+2
+2
+JOYSTICK
+XBEE_900HP
+
+
+0
+20
+20
+JOYSTICK
 XDCR_COM-09032
 
 
 0
 14
 14
+JOYSTICK
+XTAL_ECS-160-20-3X-TR
+
+
+0
+2
+2
 Jumper
 Jumper_Harwin_S1621_P10.9mm
 Harwin SMD jumper link, 12.3x2.3mm, 1.8mm height, 10.9mm pad pitch, https://cdn.harwin.com/pdfs/S1621R.pdf

@@ -3481,7 +3481,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
 			(at 168.91 24.13 0)
 			(effects
 				(font
@@ -4683,7 +4683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Esteban11:CONN_CNC_10_pins"
+		(property "Footprint" "JOYSTICK:CONN_3220-10-0100-00_CNC"
 			(at 62.23 71.12 0)
 			(effects
 				(font

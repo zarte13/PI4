@@ -2376,7 +2376,7 @@
 				)
 			)
 		)
-		(property "Footprint" "specific:XBEE_900HP"
+		(property "Footprint" "JOYSTICK:XBEE_900HP"
 			(at 147.955 81.7626 0)
 			(effects
 				(font

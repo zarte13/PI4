@@ -424,6 +424,276 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "RB141C1100:RB141C1100"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "S"
+				(at -2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "RB141C1100"
+				(at -5.842 -0.762 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" "JOYSTICK:SWITCH"
+				(at 6.096 6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MF" "e-switch inc"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MAXIMUM_PACKAGE_HEIGHT" "25.9mm"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "None"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=eda"
+				(at 0.254 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "STANDARD" "Manufacturer Recommendations"
+				(at 6.096 6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PARTREV" "C"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=snap"
+				(at 0.254 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "RB141C1100"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=7533362&manufacturer=e-switch inc&part_name=RB141C1100&search_term=rocker switch"
+				(at 0.254 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Description_1" "Rocker Switches 15A 125VAC, OFF-ON, Black Rocker, No Markings"
+				(at 0.254 6.604 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "In Stock"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "E-SWITCH"
+				(at 0 -7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "RB141C1100_0_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy 2.794 2.1336)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 0)
+					(radius 0.3302)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 2.921 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "TFT Screen:TFT_Screen_ILI9341"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -906,6 +1176,12 @@
 		(uuid "67c5d62f-aba8-44cf-a63d-277685f19841")
 	)
 	(junction
+		(at 190.5 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2feb1ea2-155a-42fc-ae0b-6e57c5ea4071")
+	)
+	(junction
 		(at 154.94 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -947,13 +1223,13 @@
 		(uuid "1aea4a69-9cd9-4abe-a237-174f8da97f39")
 	)
 	(bus_entry
-		(at 121.92 73.66)
+		(at 116.84 83.82)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21af158b-9e44-4171-9348-283d71501172")
+		(uuid "2dc502bc-fd26-4f5f-9cf9-3b3e6bef08d5")
 	)
 	(bus_entry
 		(at 41.91 69.85)
@@ -963,6 +1239,15 @@
 			(type default)
 		)
 		(uuid "363fc2ea-5400-4bac-a776-4934a632b002")
+	)
+	(bus_entry
+		(at 116.84 81.28)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a46d72d-f24c-4ca3-ab1f-63f7f63d7c21")
 	)
 	(bus_entry
 		(at 41.91 77.47)
@@ -983,13 +1268,22 @@
 		(uuid "68553776-d6a4-4e36-be4b-d9a619146688")
 	)
 	(bus_entry
-		(at 121.92 71.12)
+		(at 116.84 78.74)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "859f440c-177a-4a3a-8293-bf8c2c24c7ea")
+		(uuid "8d5acd85-6761-42cf-b486-7c5b3e2c5305")
+	)
+	(bus_entry
+		(at 116.84 76.2)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "900cbdd0-6831-4cec-ac18-b23174b14b5c")
 	)
 	(bus_entry
 		(at 41.91 74.93)
@@ -1031,6 +1325,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 83.82) (xy 124.46 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16a48e8a-6540-4eca-bd2b-50f359f58a0d")
+	)
+	(wire
+		(pts
 			(xy 44.45 72.39) (xy 49.53 72.39)
 		)
 		(stroke
@@ -1059,6 +1363,16 @@
 		)
 		(uuid "21645c56-6ab2-4f85-8507-6d93ab7842de")
 	)
+	(bus
+		(pts
+			(xy 116.84 78.74) (xy 116.84 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a20cbc1-52cf-4219-be50-6479a8124863")
+	)
 	(wire
 		(pts
 			(xy 154.94 41.91) (xy 154.94 52.07)
@@ -1069,16 +1383,6 @@
 		)
 		(uuid "2b3993f9-04b3-4fb6-b2de-d798a89e57f2")
 	)
-	(bus
-		(pts
-			(xy 121.92 71.12) (xy 121.92 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34562a95-6a8c-4ad5-b633-0e680febd8ed")
-	)
 	(wire
 		(pts
 			(xy 83.82 36.83) (xy 83.82 43.18)
@@ -1088,16 +1392,6 @@
 			(type default)
 		)
 		(uuid "3d11d8dc-1583-46cd-9d3f-65f5ecdf058b")
-	)
-	(bus
-		(pts
-			(xy 119.38 71.12) (xy 121.92 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46304265-a668-4395-9c91-c5835745303e")
 	)
 	(wire
 		(pts
@@ -1121,6 +1415,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 101.6) (xy 162.56 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "504ab986-81dc-491d-8318-b2a51a1268ac")
+	)
+	(wire
+		(pts
 			(xy 142.24 39.37) (xy 158.75 39.37)
 		)
 		(stroke
@@ -1141,13 +1445,13 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 73.66) (xy 129.54 73.66)
+			(xy 190.5 96.52) (xy 190.5 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5b440c98-22e9-4f6b-b4c5-c9ee050e7daf")
+		(uuid "5779235d-3db7-4be8-a313-e7165b29e697")
 	)
 	(wire
 		(pts
@@ -1158,16 +1462,6 @@
 			(type default)
 		)
 		(uuid "5d6e5503-cc24-45bf-988b-f4fd7329e00b")
-	)
-	(wire
-		(pts
-			(xy 124.46 76.2) (xy 129.54 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61ff6640-2e26-4362-8544-b5ca2942ceb3")
 	)
 	(wire
 		(pts
@@ -1241,6 +1535,26 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 114.3) (xy 162.56 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "841a32b1-b319-4908-a3ab-80b61a06d148")
+	)
+	(wire
+		(pts
+			(xy 119.38 78.74) (xy 124.46 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8933c4c8-3836-4603-aff4-e24e3be639d4")
+	)
+	(wire
+		(pts
 			(xy 44.45 85.09) (xy 49.53 85.09)
 		)
 		(stroke
@@ -1308,6 +1622,16 @@
 			(type default)
 		)
 		(uuid "ae75f426-4b42-4870-8129-6f735ef67010")
+	)
+	(bus
+		(pts
+			(xy 116.84 76.2) (xy 116.84 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b24d40d8-837c-4b62-8d2a-be366f07b016")
 	)
 	(wire
 		(pts
@@ -1379,6 +1703,26 @@
 		)
 		(uuid "c4b12eae-9927-452a-950b-dd5dfe272c7e")
 	)
+	(bus
+		(pts
+			(xy 116.84 81.28) (xy 116.84 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8461abd-004e-4ed7-97c1-9f9b27499359")
+	)
+	(wire
+		(pts
+			(xy 177.8 114.3) (xy 190.5 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9d52a7c-99e8-46a0-9ded-93b6b98cd2d7")
+	)
 	(wire
 		(pts
 			(xy 83.82 60.96) (xy 83.82 43.18)
@@ -1388,6 +1732,16 @@
 			(type default)
 		)
 		(uuid "d4d082ae-f5a9-423a-8a29-d8ff21e12704")
+	)
+	(wire
+		(pts
+			(xy 119.38 81.28) (xy 124.46 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5ace3d9-4725-427c-b950-9e4d3c3d52bf")
 	)
 	(wire
 		(pts
@@ -1418,6 +1772,46 @@
 			(type default)
 		)
 		(uuid "e8e43d03-6129-47a2-86b1-fd5656013a7e")
+	)
+	(wire
+		(pts
+			(xy 119.38 86.36) (xy 124.46 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec09ddda-641e-4673-ad3d-83ef02ec1f28")
+	)
+	(bus
+		(pts
+			(xy 114.3 76.2) (xy 116.84 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eef5b8e5-8d51-42aa-85f5-580a6cde416c")
+	)
+	(wire
+		(pts
+			(xy 177.8 101.6) (xy 190.5 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f15bcdda-50bd-4c38-9b9e-137bf54a8939")
+	)
+	(wire
+		(pts
+			(xy 190.5 101.6) (xy 190.5 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2e22dba-1dff-48e2-97fa-af14a617e5f2")
 	)
 	(label "RESET"
 		(at 49.53 85.09 0)
@@ -1479,6 +1873,16 @@
 		)
 		(uuid "231d5b3b-ba28-4c4b-ae96-31f4a7045e15")
 	)
+	(label "VALVE_1"
+		(at 124.46 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "26aeefb1-7b82-4263-b2ba-a310f71e56c4")
+	)
 	(label "X_VALUE"
 		(at 142.24 49.53 0)
 		(effects
@@ -1499,15 +1903,15 @@
 		)
 		(uuid "32c68fae-905d-47e0-a836-da4a8a22e2b1")
 	)
-	(label "X_VALUE"
-		(at 129.54 73.66 0)
+	(label "VALVE_1"
+		(at 152.4 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "43524505-cdfb-472e-b96f-9102a00dd298")
+		(uuid "355b6ccc-cb9d-4636-9eec-81249af01822")
 	)
 	(label "D{slash}C"
 		(at 76.2 50.8 0)
@@ -1519,6 +1923,26 @@
 		)
 		(uuid "568144fa-9c33-40e8-aa02-d920bc1d2e5b")
 	)
+	(label "VALVE_2"
+		(at 124.46 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5eec3e82-28c0-4395-a589-356b71becd58")
+	)
+	(label "Y_VALUE"
+		(at 124.46 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "996894e6-5de3-481e-92aa-f642b682ff7f")
+	)
 	(label "CS_TFT"
 		(at 49.53 80.01 0)
 		(effects
@@ -1528,6 +1952,16 @@
 			(justify left bottom)
 		)
 		(uuid "99e2e029-1b7b-4331-9af8-257f0baac79a")
+	)
+	(label "VALVE_2"
+		(at 152.4 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a0eebb0b-123d-4b67-9e0f-24b87f0d8a7a")
 	)
 	(label "Y_VALUE"
 		(at 142.24 39.37 0)
@@ -1539,15 +1973,15 @@
 		)
 		(uuid "a462905d-f86c-4df1-8267-852de41bb2e8")
 	)
-	(label "Y_VALUE"
-		(at 129.54 76.2 0)
+	(label "X_VALUE"
+		(at 124.46 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "cde6e949-5c3b-4ed5-bdc9-aa9e9ee8ee24")
+		(uuid "d5cd45f5-d263-41b8-86d0-7bfeed18a72e")
 	)
 	(label "CS_TFT"
 		(at 76.2 55.88 0)
@@ -1579,17 +2013,6 @@
 		)
 		(uuid "f3308b77-3857-4475-8b35-15bf9e7059b3")
 	)
-	(hierarchical_label "{JOYSTICK}"
-		(shape bidirectional)
-		(at 119.38 71.12 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d9466377-f249-49b5-ad30-7a9d0a728d78")
-	)
 	(hierarchical_label "{TFT_SCREEN}"
 		(shape bidirectional)
 		(at 39.37 68.58 180)
@@ -1600,6 +2023,83 @@
 			(justify right)
 		)
 		(uuid "e4d75e40-afa9-48f2-b90d-b74e93306e93")
+	)
+	(hierarchical_label "{JOYSTICK}"
+		(shape bidirectional)
+		(at 114.3 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f6f6082a-d37d-4778-b0f7-7b13ba1691de")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 190.5 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "198e11d7-5e81-415e-be76-fead5b31a9b2")
+		(property "Reference" "#PWR037"
+			(at 190.5 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 190.5 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 190.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "be87dee8-1f4e-4e09-80db-72f8f80365a2")
+		)
+		(instances
+			(project ""
+				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/38a729b1-3154-46e9-b83e-478314d9098f"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "TFT Screen:TFT_Screen_ILI9341")
@@ -2129,6 +2629,205 @@
 		)
 	)
 	(symbol
+		(lib_id "RB141C1100:RB141C1100")
+		(at 170.18 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2581fa2-385b-48da-9427-1f0f3f8d5fa9")
+		(property "Reference" "S1"
+			(at 170.18 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RB141C1100"
+			(at 170.18 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JOYSTICK:SWITCH"
+			(at 176.276 95.504 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "e-switch inc"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "25.9mm"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "None"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=eda"
+			(at 170.434 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 176.276 95.504 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "C"
+			(at 170.18 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=snap"
+			(at 170.434 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "RB141C1100"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=7533362&manufacturer=e-switch inc&part_name=RB141C1100&search_term=rocker switch"
+			(at 170.434 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Rocker Switches 15A 125VAC, OFF-ON, Black Rocker, No Markings"
+			(at 170.434 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "E-SWITCH"
+			(at 170.18 108.712 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c1bb8940-6530-404a-96d4-6a3c12c4d481")
+		)
+		(pin "1"
+			(uuid "c5b609c3-b328-4d08-8c42-a07594a0d155")
+		)
+		(instances
+			(project ""
+				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/38a729b1-3154-46e9-b83e-478314d9098f"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 88.9 60.96 0)
 		(unit 1)
@@ -2189,6 +2888,205 @@
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/38a729b1-3154-46e9-b83e-478314d9098f"
 					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "RB141C1100:RB141C1100")
+		(at 170.18 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd571874-854d-4491-afc4-174297ac5506")
+		(property "Reference" "S2"
+			(at 170.18 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "RB141C1100"
+			(at 170.18 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "JOYSTICK:SWITCH"
+			(at 176.276 108.204 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "e-switch inc"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "25.9mm"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "None"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=eda"
+			(at 170.434 107.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "STANDARD" "Manufacturer Recommendations"
+			(at 176.276 108.204 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PARTREV" "C"
+			(at 170.18 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/RB141C1100/E-Switch/view-part/?ref=snap"
+			(at 170.434 107.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "RB141C1100"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=7533362&manufacturer=e-switch inc&part_name=RB141C1100&search_term=rocker switch"
+			(at 170.434 107.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "Rocker Switches 15A 125VAC, OFF-ON, Black Rocker, No Markings"
+			(at 170.434 107.696 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "E-SWITCH"
+			(at 170.18 121.412 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "399109ea-ed53-487b-9262-8931ffb00155")
+		)
+		(pin "2"
+			(uuid "9afa138d-2f05-4440-8e84-4f2e4f84b979")
+		)
+		(instances
+			(project ""
+				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/38a729b1-3154-46e9-b83e-478314d9098f"
+					(reference "S2")
 					(unit 1)
 				)
 			)
