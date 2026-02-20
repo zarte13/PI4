@@ -2363,7 +2363,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00330c89-3c09-4827-9aca-720838bfcd04")
-		(property "Reference" "R18"
+		(property "Reference" "R20"
 			(at 165.862 77.47 0)
 			(effects
 				(font
@@ -2442,7 +2442,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R18")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -2806,7 +2806,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2c95cc22-04b9-485b-8977-d1e069e55e89")
-		(property "Reference" "R16"
+		(property "Reference" "R18"
 			(at 100.965 81.915 0)
 			(effects
 				(font
@@ -2885,7 +2885,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R16")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -3158,7 +3158,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3c55b545-f04b-4b4a-a7f6-4557539ac662")
-		(property "Reference" "R19"
+		(property "Reference" "R21"
 			(at 165.862 87.63 0)
 			(effects
 				(font
@@ -3237,7 +3237,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R19")
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -3540,7 +3540,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6bd3aad3-a2cd-416b-b022-4f3c51cf9630")
-		(property "Reference" "R15"
+		(property "Reference" "R17"
 			(at 94.615 81.915 0)
 			(effects
 				(font
@@ -3619,7 +3619,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R15")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -4296,7 +4296,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ad2aa7fa-6cef-4f58-8086-dfa587ea6989")
-		(property "Reference" "R14"
+		(property "Reference" "R16"
 			(at 100.965 72.39 0)
 			(effects
 				(font
@@ -4375,7 +4375,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R14")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -4457,7 +4457,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b1f972a8-6074-4a37-89a0-5a652f7f7f6c")
-		(property "Reference" "R20"
+		(property "Reference" "R22"
 			(at 203.2 90.805 0)
 			(effects
 				(font
@@ -4538,7 +4538,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R20")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -4649,7 +4649,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ba092378-8a2e-4017-a583-5f43d161fd31")
-		(property "Reference" "R17"
+		(property "Reference" "R19"
 			(at 111.125 83.82 0)
 			(effects
 				(font
@@ -4728,7 +4728,7 @@
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe/b6550ae5-c9f3-4780-b288-b1ff08ddf5fe"
-					(reference "R17")
+					(reference "R19")
 					(unit 1)
 				)
 			)

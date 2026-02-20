@@ -5,6 +5,56 @@
 	(uuid "7d904e0d-c2b1-4329-81a9-fc34d181a4fe")
 	(paper "A4")
 	(lib_symbols)
+	(bus
+		(pts
+			(xy 106.68 106.68) (xy 106.68 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2acf5351-2b5a-4be1-9975-0a37400e1c6a")
+	)
+	(bus
+		(pts
+			(xy 101.6 106.68) (xy 101.6 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79f96cbb-0e7d-4be3-8c5e-8ee77fd85c91")
+	)
+	(bus
+		(pts
+			(xy 101.6 68.58) (xy 101.6 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2f34901-1b07-46c7-8706-3e44e37f7161")
+	)
+	(bus
+		(pts
+			(xy 124.46 88.9) (xy 139.7 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3922085-f5fb-4117-bc61-91a3c80250b1")
+	)
+	(bus
+		(pts
+			(xy 124.46 99.06) (xy 139.7 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8aa75a7-ce79-49e7-8b8a-177b50546f74")
+	)
 	(sheet
 		(at 63.5 121.92)
 		(size 60.96 25.4)
@@ -36,6 +86,26 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "{JOYSTICK}" bidirectional
+			(at 101.6 121.92 90)
+			(uuid "a266a6f2-a123-436c-9d3d-7334f3c202e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{TFT_SCREEN}" bidirectional
+			(at 106.68 121.92 90)
+			(uuid "c5739e0c-ccd4-42af-8bbe-435e3c7d96c5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -80,6 +150,56 @@
 				(justify left top)
 			)
 		)
+		(pin "RF{XBEE}" bidirectional
+			(at 101.6 80.01 90)
+			(uuid "6cf045d0-bc39-4feb-8046-a774f834994c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{DEBUG}" bidirectional
+			(at 124.46 99.06 0)
+			(uuid "4bf3b442-e432-4b3a-9efa-5c9500049ddb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{JOYSTICK}" bidirectional
+			(at 101.6 106.68 270)
+			(uuid "b2ae9260-b42a-466d-a7f2-92656aff1fc7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{TFT_SCREEN}" bidirectional
+			(at 106.68 106.68 270)
+			(uuid "3e52c51b-7b32-4432-b177-16c93decfe94")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{USB}" bidirectional
+			(at 124.46 88.9 0)
+			(uuid "1b99c0c4-9ec4-47df-ba4c-4b08474449ac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe"
@@ -122,6 +242,16 @@
 				(justify left top)
 			)
 		)
+		(pin "RF{XBEE}" bidirectional
+			(at 101.6 68.58 270)
+			(uuid "5d6dc46a-e0f7-44ab-805a-23bd3ac01606")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "integration_elec_master"
 				(path "/7d904e0d-c2b1-4329-81a9-fc34d181a4fe"
@@ -131,8 +261,8 @@
 		)
 	)
 	(sheet
-		(at 151.765 78.74)
-		(size 60.96 28.575)
+		(at 139.7 41.91)
+		(size 60.325 28.575)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -147,7 +277,7 @@
 		)
 		(uuid "b6550ae5-c9f3-4780-b288-b1ff08ddf5fe")
 		(property "Sheetname" "REGULATOR"
-			(at 151.765 78.0284 0)
+			(at 139.7 41.1984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -156,7 +286,7 @@
 			)
 		)
 		(property "Sheetfile" "REGULATOR.kicad_sch"
-			(at 151.765 107.8996 0)
+			(at 139.7 71.0696 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -173,8 +303,8 @@
 		)
 	)
 	(sheet
-		(at 151.13 41.275)
-		(size 60.325 25.4)
+		(at 139.7 80.01)
+		(size 60.325 26.67)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -189,7 +319,7 @@
 		)
 		(uuid "ef54b424-e17d-48b3-87ed-158617f93c7a")
 		(property "Sheetname" "DEBUG_USB"
-			(at 151.13 40.5634 0)
+			(at 139.7 79.2984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -198,12 +328,32 @@
 			)
 		)
 		(property "Sheetfile" "DEBUG_USB.kicad_sch"
-			(at 151.13 67.2596 0)
+			(at 139.7 107.2646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "{DEBUG}" bidirectional
+			(at 139.7 99.06 180)
+			(uuid "f9f6a42c-a7f2-43ae-9e83-550fad00e9d4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{USB}" output
+			(at 139.7 88.9 180)
+			(uuid "2396669d-8cee-4928-85f6-0532aa2b92b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

@@ -1547,6 +1547,15 @@
 		(uuid "2225c38c-61ad-43ac-83a4-271c6610af13")
 	)
 	(bus_entry
+		(at 53.34 55.88)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28ca7aee-3c98-4ec3-b9bc-c118e09c768a")
+	)
+	(bus_entry
 		(at 53.34 58.42)
 		(size 2.54 2.54)
 		(stroke
@@ -1565,15 +1574,6 @@
 		(uuid "8dcbcba5-f136-44cf-9cd1-a864e7aff8bb")
 	)
 	(bus_entry
-		(at 53.34 55.88)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc9162ba-e276-46ca-b9c9-a84c0f90d17a")
-	)
-	(bus_entry
 		(at 53.34 68.58)
 		(size 2.54 2.54)
 		(stroke
@@ -1581,15 +1581,6 @@
 			(type default)
 		)
 		(uuid "df148347-3070-45b8-b8dc-06e1bab71901")
-	)
-	(bus_entry
-		(at 53.34 53.34)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6d481b6-7a73-4b5d-a9a9-bbc2600ca0f3")
 	)
 	(bus_entry
 		(at 53.34 71.12)
@@ -1642,16 +1633,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 55.88) (xy 60.96 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08f260d5-2c77-47ae-9410-aa5fea2331a6")
-	)
-	(wire
-		(pts
 			(xy 99.06 101.6) (xy 91.44 101.6)
 		)
 		(stroke
@@ -1699,16 +1680,6 @@
 			(type default)
 		)
 		(uuid "23099474-137f-45e5-a2df-41c685f6e837")
-	)
-	(bus
-		(pts
-			(xy 53.34 55.88) (xy 53.34 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24ba13e5-a415-441c-91b4-bc1e35d52278")
 	)
 	(wire
 		(pts
@@ -1872,7 +1843,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 75.565) (xy 172.72 73.66)
+			(xy 172.72 75.565) (xy 172.72 69.85)
 		)
 		(stroke
 			(width 0)
@@ -1929,6 +1900,16 @@
 			(type default)
 		)
 		(uuid "86383803-5e13-4e61-b4fa-c67cd6f380a7")
+	)
+	(bus
+		(pts
+			(xy 53.34 50.8) (xy 53.34 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8722fca6-fea0-4087-a84d-6d3e5bb2f38e")
 	)
 	(wire
 		(pts
@@ -2070,16 +2051,6 @@
 		)
 		(uuid "cbae35e9-46a0-416f-b669-00b114831c2a")
 	)
-	(bus
-		(pts
-			(xy 53.34 53.34) (xy 53.34 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbf13362-c1eb-4516-aa29-2dc7cd9b7a20")
-	)
 	(wire
 		(pts
 			(xy 125.73 91.44) (xy 99.06 91.44)
@@ -2089,6 +2060,16 @@
 			(type default)
 		)
 		(uuid "d09ebeb8-6221-43e1-93e0-3bb787af5ee8")
+	)
+	(bus
+		(pts
+			(xy 53.34 55.88) (xy 53.34 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1610cec-dba4-4413-aa63-05b7f6c03afc")
 	)
 	(wire
 		(pts
@@ -2102,7 +2083,7 @@
 	)
 	(bus
 		(pts
-			(xy 50.8 53.34) (xy 53.34 53.34)
+			(xy 50.8 50.8) (xy 53.34 50.8)
 		)
 		(stroke
 			(width 0)
@@ -2320,16 +2301,6 @@
 		)
 		(uuid "e6cf804f-186b-4b6f-9754-36569082c7ea")
 	)
-	(label "RF.XBEE_UART_IN"
-		(at 60.96 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f07bbe45-1814-4d7d-af75-536c50336ff7")
-	)
 	(label "RF.XBEE_nReset"
 		(at 60.96 58.42 0)
 		(effects
@@ -2342,7 +2313,7 @@
 	)
 	(hierarchical_label "RF{XBEE}"
 		(shape bidirectional)
-		(at 50.8 53.34 180)
+		(at 50.8 50.8 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2856,7 +2827,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 172.72 73.66 0)
+		(at 172.72 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2864,7 +2835,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c3fa633")
 		(property "Reference" "#PWR06"
-			(at 172.72 77.47 0)
+			(at 172.72 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2873,7 +2844,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 173.101 69.2658 0)
+			(at 173.101 65.4558 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2881,7 +2852,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 73.66 0)
+			(at 172.72 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2890,7 +2861,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 73.66 0)
+			(at 172.72 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2899,7 +2870,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 172.72 73.66 0)
+			(at 172.72 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
