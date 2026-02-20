@@ -1,4 +1,4 @@
-28286758234334524
+28293841010079066
 750313638
 WE-PPTI_1209_L12.7W9.14H7.62
 
@@ -70272,6 +70272,13 @@ LQH3NPN101MMEL
 0
 2
 2
+JOYSTICK
+XDCR_COM-09032
+
+
+0
+14
+14
 Jumper
 Jumper_Harwin_S1621_P10.9mm
 Harwin SMD jumper link, 12.3x2.3mm, 1.8mm height, 10.9mm pad pitch, https://cdn.harwin.com/pdfs/S1621R.pdf
@@ -94849,6 +94856,13 @@ Potentiometer vertical vishay
 0
 3
 3
+RELAY
+RELAY8_J104D2C12VDC.20S_CRS
+
+J104D2C12VDC.20S 
+0
+8
+8
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf
@@ -98468,6 +98482,13 @@ rotary encoder illuminated switch vertical
 0
 9
 8
+SWITCH
+SW_RB141C1100
+
+
+0
+2
+2
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf
@@ -100568,6 +100589,13 @@ Logo WEEE
 0
 0
 0
+TFT
+TFT screen ILI9341
+
+
+0
+22
+18
 TerminalBlock
 TerminalBlock_Altech_AK300-2_P5.00mm
 Altech AK300 terminal block, pitch 5.0mm, 45 degree angled, see http://www.mouser.com/ds/2/16/PCBMETRC-24178.pdf

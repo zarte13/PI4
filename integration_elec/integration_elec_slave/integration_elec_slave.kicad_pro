@@ -430,7 +430,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -479,14 +479,7 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "/ADC/SENSORS": [
-        "VO_LTF6800"
-      ],
-      "/ADC/{SENSORS}": [
-        "VO_LTF6800"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -798,8 +791,12 @@
       "ADC"
     ],
     [
-      "1878c7a2-d78d-490f-bda1-eeca2619eaee",
+      "55d1ee96-65c2-40f4-8a3f-131aed981cc9",
       "CONNECTORS"
+    ],
+    [
+      "b78ff08f-223f-490f-884b-fdd72220c51f",
+      "GESTION_ALIM"
     ]
   ],
   "text_variables": {}

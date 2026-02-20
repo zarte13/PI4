@@ -667,26 +667,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "0-3V"
-		(exclude_from_sim no)
-		(at 118.364 91.948 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "08e9e3e6-ac25-4e82-b3c0-aa25ff20bf3c")
-	)
-	(text "0-10V"
-		(exclude_from_sim no)
-		(at 118.11 78.486 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fc855363-b7e0-4992-a913-dd33fffa2291")
-	)
 	(junction
 		(at 177.8 88.9)
 		(diameter 0)
@@ -699,14 +679,17 @@
 		(color 0 0 0 0)
 		(uuid "b54cd090-3f66-489b-bdd9-ac91745b886c")
 	)
-	(bus_entry
-		(at 68.58 72.39)
-		(size 2.54 2.54)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "29a44747-1ae6-4853-9b68-073e85ab9bfa")
+	(no_connect
+		(at 143.51 93.98)
+		(uuid "682f6732-b293-4aba-b24f-c34be4588309")
+	)
+	(no_connect
+		(at 143.51 96.52)
+		(uuid "cfb4275d-d6ee-44b6-87a7-591a3d40f192")
+	)
+	(no_connect
+		(at 143.51 99.06)
+		(uuid "e46de1fb-0e17-4936-bb42-ceb6d07c3036")
 	)
 	(bus_entry
 		(at 232.41 102.87)
@@ -734,6 +717,15 @@
 			(type default)
 		)
 		(uuid "982d88d0-b17b-4bdb-9c80-f18f1462838a")
+	)
+	(bus_entry
+		(at 62.23 85.09)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef6043ab-6dbb-484c-8b81-dc7f4d972058")
 	)
 	(wire
 		(pts
@@ -794,6 +786,16 @@
 			(type default)
 		)
 		(uuid "2563f4c2-4a37-4d8d-a972-b9f542b7b67e")
+	)
+	(bus
+		(pts
+			(xy 62.23 85.09) (xy 62.23 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ab1372-ff21-4c5e-a8ef-1248ee6bd3e1")
 	)
 	(wire
 		(pts
@@ -857,13 +859,13 @@
 	)
 	(bus
 		(pts
-			(xy 232.41 105.41) (xy 232.41 113.03)
+			(xy 62.23 83.82) (xy 62.23 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6355e80e-740a-4235-b450-2b4390807523")
+		(uuid "645773f2-bedb-43b9-945a-0266187e1cc1")
 	)
 	(bus
 		(pts
@@ -895,6 +897,16 @@
 		)
 		(uuid "848e0c6b-3853-4a71-9efc-73cdbba5edde")
 	)
+	(bus
+		(pts
+			(xy 59.69 83.82) (xy 62.23 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88334a40-b1e0-4f2e-9ab0-87ee2b184292")
+	)
 	(wire
 		(pts
 			(xy 224.79 105.41) (xy 229.87 105.41)
@@ -904,16 +916,6 @@
 			(type default)
 		)
 		(uuid "975d06f3-7b10-484d-a989-c75bffad1873")
-	)
-	(bus
-		(pts
-			(xy 68.58 72.39) (xy 68.58 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a36d67d-6283-46ec-b321-48bc3d175300")
 	)
 	(wire
 		(pts
@@ -935,26 +937,6 @@
 		)
 		(uuid "d5a2ba6f-882c-4a22-b488-1081c275d6fb")
 	)
-	(bus
-		(pts
-			(xy 68.58 71.12) (xy 68.58 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e03f257f-575b-4e2e-9c02-a7f35ec5ae2a")
-	)
-	(wire
-		(pts
-			(xy 71.12 74.93) (xy 73.66 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e502524c-e8f5-4e88-9aef-1454b0f1a05e")
-	)
 	(wire
 		(pts
 			(xy 163.83 96.52) (xy 173.99 96.52)
@@ -967,16 +949,6 @@
 	)
 	(bus
 		(pts
-			(xy 66.04 71.12) (xy 68.58 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5291461-9e8f-4746-86a2-3acf1aa92bbc")
-	)
-	(bus
-		(pts
 			(xy 232.41 101.6) (xy 232.41 102.87)
 		)
 		(stroke
@@ -985,15 +957,25 @@
 		)
 		(uuid "fa614396-e735-47c9-884d-f7845df35bdd")
 	)
-	(label "I2C_SCL"
-		(at 224.79 105.41 180)
+	(wire
+		(pts
+			(xy 64.77 87.63) (xy 67.31 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff7c2158-0070-464f-9e55-568d8a1b0994")
+	)
+	(label "PRESSURE_METER"
+		(at 123.19 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "379d9f35-8d89-4b3f-b069-3be445532f28")
+		(uuid "383493ea-a5d0-4656-a673-3a0c1de5dc05")
 	)
 	(label "I2C_SDA"
 		(at 224.79 107.95 180)
@@ -1025,16 +1007,6 @@
 		)
 		(uuid "6b2c5345-1dda-4a77-9b62-9522537dde48")
 	)
-	(label "VO_LTF6800"
-		(at 123.19 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "77e4a27b-92eb-4e0f-8738-9b5fa7769cd2")
-	)
 	(label "I2C_SCL"
 		(at 173.99 93.98 0)
 		(effects
@@ -1045,16 +1017,6 @@
 		)
 		(uuid "81d78ab7-d505-4c1d-9106-d07c43309ba4")
 	)
-	(label "VO_LTF6800"
-		(at 73.66 74.93 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "89278fa5-c0f6-4dca-a89c-b71613beb33a")
-	)
 	(label "INT_ADC_OD"
 		(at 186.69 88.9 0)
 		(effects
@@ -1064,6 +1026,37 @@
 			(justify left bottom)
 		)
 		(uuid "a4eacec5-2cbc-42cf-9f47-9664de7ef587")
+	)
+	(label "I2C_SCL"
+		(at 224.79 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "be89e473-6a03-4870-97bb-bd9fc43d0a7b")
+	)
+	(label "PRESSURE_METER"
+		(at 67.31 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfa4b74f-15c2-4fae-a07f-1481e387aab5")
+	)
+	(hierarchical_label "{SENSORS}"
+		(shape bidirectional)
+		(at 59.69 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "17a6741a-2f07-4945-a276-d96b0b4103c6")
 	)
 	(hierarchical_label "{INTERRUPTS}"
 		(shape output)
@@ -1087,25 +1080,73 @@
 		)
 		(uuid "5ea20d1b-a32d-4e23-a5ed-6af4431ac882")
 	)
-	(hierarchical_label "{SENSORS}"
-		(shape bidirectional)
-		(at 66.04 71.12 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b2ad53ef-bb74-4f30-865f-e2f69eb0cd64")
-		(property "Netclass" "VO_LTF6800"
-			(at 60.452 74.422 0)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 123.19 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19d520f8-5181-4b1e-bd58-5f1a0bde8359")
+		(property "Reference" "R22"
+			(at 125.73 95.2499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
-				(justify right)
+				(justify left)
+			)
+		)
+		(property "Value" "20k"
+			(at 125.73 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 124.206 96.774 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 123.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2f684352-7d8a-4c08-aa5d-d80195080098")
+		)
+		(pin "1"
+			(uuid "256065f1-db03-47d0-bb10-2305cb9743a1")
+		)
+		(instances
+			(project ""
+				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
+					(reference "R22")
+					(unit 1)
+				)
 			)
 		)
 	)
@@ -1184,8 +1225,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6345ccf7-2b1c-4423-9eac-3730f8dae8a6")
-		(property "Reference" "R22"
+		(uuid "92caa28f-1845-4801-aa0d-8decec643528")
+		(property "Reference" "R23"
 			(at 125.73 85.0899 0)
 			(effects
 				(font
@@ -1194,7 +1235,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22k"
+		(property "Value" "10k"
 			(at 125.73 87.6299 0)
 			(effects
 				(font
@@ -1203,7 +1244,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" ""
 			(at 124.206 86.614 90)
 			(effects
 				(font
@@ -1231,15 +1272,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "c047dee5-328e-424d-b9bc-d2e9506a6c7f")
+			(uuid "42e56772-bfb9-45d0-80a4-5fe14ab8b891")
 		)
 		(pin "2"
-			(uuid "0b86dbae-7911-42c8-9b81-874eb595306b")
+			(uuid "c2695939-42dd-4c54-a021-ef7cfd6c28a4")
 		)
 		(instances
 			(project ""
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
-					(reference "R22")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -1536,76 +1577,6 @@
 			(project ""
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
 					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 123.19 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f0394cb3-206f-40cf-bf04-cd6a2c35445b")
-		(property "Reference" "R23"
-			(at 125.73 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 125.73 97.7899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 124.206 96.774 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 123.19 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a5f0ec45-7105-485b-b42f-92b38dff57c1")
-		)
-		(pin "2"
-			(uuid "afe18143-747e-45d7-935f-c0e546e03e2b")
-		)
-		(instances
-			(project "integration_elec_slave"
-				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
-					(reference "R23")
 					(unit 1)
 				)
 			)
