@@ -438,7 +438,7 @@
 			)
 		)
 		(pin "{ELECTROVANNE_CTRL}" input
-			(at 257.8101 81.2799 270)
+			(at 257.8101 81.28 270)
 			(uuid "3cb2d682-2cad-4fb6-a537-932cf3a5ade0")
 			(effects
 				(font
@@ -530,7 +530,7 @@
 			)
 		)
 		(pin "{I2C_BUS}" bidirectional
-			(at 172.72 99.695 270)
+			(at 172.72 99.06 270)
 			(uuid "b0aa9459-b684-45cf-a4c4-82fb7fccb7fb")
 			(effects
 				(font
@@ -540,7 +540,7 @@
 			)
 		)
 		(pin "{INTERRUPTS}" output
-			(at 161.29 99.695 270)
+			(at 161.29 99.06 270)
 			(uuid "6c2483fc-2926-4ae3-87e6-b6f675db8025")
 			(effects
 				(font

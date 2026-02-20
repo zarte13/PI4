@@ -787,16 +787,6 @@
 		)
 		(uuid "2563f4c2-4a37-4d8d-a972-b9f542b7b67e")
 	)
-	(bus
-		(pts
-			(xy 62.23 85.09) (xy 62.23 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32ab1372-ff21-4c5e-a8ef-1248ee6bd3e1")
-	)
 	(wire
 		(pts
 			(xy 123.19 78.74) (xy 123.19 82.55)
@@ -1108,7 +1098,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 124.206 96.774 90)
 			(effects
 				(font
@@ -1135,6 +1125,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "P20KDACT-ND"
+			(at 123.19 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2f684352-7d8a-4c08-aa5d-d80195080098")
 		)
@@ -1145,6 +1144,100 @@
 			(project ""
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
 					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 123.19 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30962012-774e-42bb-86de-38b80541354b")
+		(property "Reference" "R23"
+			(at 121.92 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 121.92 90.805 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 124.206 86.614 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-10.0KCRCT-ND"
+			(at -97.79 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 34.925 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0805FR-0710KL"
+			(at 34.925 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5282f015-63bb-4c72-af55-80f67f4bde28")
+		)
+		(pin "2"
+			(uuid "0735790b-4959-4386-8986-2a202dc722bb")
+		)
+		(instances
+			(project "integration_elec_slave"
+				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -1218,76 +1311,6 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 123.19 86.36 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92caa28f-1845-4801-aa0d-8decec643528")
-		(property "Reference" "R23"
-			(at 125.73 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 125.73 87.6299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 124.206 86.614 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 123.19 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 123.19 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "42e56772-bfb9-45d0-80a4-5fe14ab8b891")
-		)
-		(pin "2"
-			(uuid "c2695939-42dd-4c54-a021-ef7cfd6c28a4")
-		)
-		(instances
-			(project ""
-				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/72fa526e-6791-4af4-9337-9235f1a1456e"
-					(reference "R23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
 		(at 177.8 82.55 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1314,7 +1337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 178.816 82.804 90)
 			(effects
 				(font
@@ -1333,6 +1356,15 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
+			(at 177.8 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-2.20KCRCT-ND"
 			(at 177.8 82.55 0)
 			(effects
 				(font
@@ -1403,6 +1435,15 @@
 			)
 		)
 		(property "Description" "Ultra-Small, Low-Power, I2C-Compatible, 3.3-kSPS, 12-Bit ADCs With Internal Reference, Oscillator, and Programmable Comparator, VSSOP-10"
+			(at 153.67 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "595-ADS1015IDGSR "
 			(at 153.67 93.98 0)
 			(effects
 				(font

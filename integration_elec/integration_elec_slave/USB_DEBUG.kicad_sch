@@ -4063,6 +4063,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "2073-USB4105-GF-ACT-ND"
+			(at 250.19 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "A6"
 			(uuid "4b114726-804e-4208-a458-1c150fd3a226")
 		)
@@ -5003,6 +5012,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "311-5.10KHRCT-ND"
+			(at 229.87 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ec454055-9ddc-4f55-b465-b19c496d6261")
 		)
@@ -5331,6 +5349,15 @@
 			)
 		)
 		(property "STANDARD" ""
+			(at 222.25 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-5.10KHRCT-ND"
 			(at 222.25 38.1 0)
 			(effects
 				(font

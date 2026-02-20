@@ -1761,6 +1761,12 @@
 		(uuid "6b47c5e9-a6dc-46bb-8fe1-582dea69b6dd")
 	)
 	(junction
+		(at 99.06 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6b8b95cc-e561-44eb-8722-15900fa820b4")
+	)
+	(junction
 		(at 106.68 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1827,12 +1833,6 @@
 		(uuid "a7cb27ef-265d-42b7-94d9-72363492cb76")
 	)
 	(junction
-		(at 100.965 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5a39668-3670-4371-930e-f21cbe7158fd")
-	)
-	(junction
 		(at 173.99 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1855,6 +1855,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c289d14b-598e-4410-805a-8a069376aeba")
+	)
+	(junction
+		(at 102.87 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c41db0f5-4b00-4180-b545-b16d30c66431")
 	)
 	(junction
 		(at 97.79 144.78)
@@ -1947,12 +1953,6 @@
 		(uuid "ecd7a1cb-1944-4624-89b7-88f2dd8f7c57")
 	)
 	(junction
-		(at 103.505 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ed5a25f0-1aec-47ef-bace-9633bfab4173")
-	)
-	(junction
 		(at 118.11 60.96)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2023,6 +2023,16 @@
 			(type default)
 		)
 		(uuid "09a207a8-9839-47ac-a761-cf9bde1dbb7c")
+	)
+	(wire
+		(pts
+			(xy 99.06 60.96) (xy 102.87 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09b6bf3b-10a1-4161-ac8a-65f04a3c73e3")
 	)
 	(wire
 		(pts
@@ -2196,7 +2206,7 @@
 	)
 	(wire
 		(pts
-			(xy 103.505 59.055) (xy 103.505 60.96)
+			(xy 102.87 59.69) (xy 102.87 60.96)
 		)
 		(stroke
 			(width 0)
@@ -2386,6 +2396,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 60.96) (xy 106.68 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40849dbc-3342-4d38-8b71-5666411a2b12")
+	)
+	(wire
+		(pts
 			(xy 200.66 129.54) (xy 200.66 124.46)
 		)
 		(stroke
@@ -2436,7 +2456,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 43.18) (xy 107.95 43.18)
+			(xy 99.06 44.45) (xy 101.6 44.45)
 		)
 		(stroke
 			(width 0)
@@ -2526,7 +2546,7 @@
 	)
 	(wire
 		(pts
-			(xy 103.505 45.72) (xy 106.68 45.72)
+			(xy 102.87 45.72) (xy 106.68 45.72)
 		)
 		(stroke
 			(width 0)
@@ -2553,16 +2573,6 @@
 			(type default)
 		)
 		(uuid "5eb846dc-acd5-450f-a967-d55954763698")
-	)
-	(wire
-		(pts
-			(xy 100.965 60.96) (xy 95.25 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "60bbaf20-b051-4db5-84c2-feeba520db50")
 	)
 	(wire
 		(pts
@@ -2653,6 +2663,16 @@
 			(type default)
 		)
 		(uuid "777c4c8f-2780-4514-aa91-c70b3fb3c706")
+	)
+	(wire
+		(pts
+			(xy 101.6 44.45) (xy 101.6 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78941946-81a0-4ce6-9940-165aa716f039")
 	)
 	(wire
 		(pts
@@ -2866,7 +2886,7 @@
 	)
 	(wire
 		(pts
-			(xy 103.505 53.975) (xy 103.505 53.34)
+			(xy 102.87 54.61) (xy 102.87 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2883,6 +2903,16 @@
 			(type default)
 		)
 		(uuid "94fae42a-2429-4b96-8108-bec995450b70")
+	)
+	(wire
+		(pts
+			(xy 101.6 43.18) (xy 107.95 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "953d1cbf-989e-4848-bcf9-ba85756c91c7")
 	)
 	(wire
 		(pts
@@ -3033,16 +3063,6 @@
 			(type default)
 		)
 		(uuid "b1d8bec9-b681-4f5d-b599-18876a678da5")
-	)
-	(wire
-		(pts
-			(xy 103.505 60.96) (xy 100.965 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b292776c-9e1b-4d5d-bf6c-c0b69b496926")
 	)
 	(wire
 		(pts
@@ -3386,16 +3406,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 60.96) (xy 103.505 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "edfaeab0-eaf3-4a56-8d16-f521b6f11055")
-	)
-	(wire
-		(pts
 			(xy 129.54 119.38) (xy 140.97 119.38)
 		)
 		(stroke
@@ -3436,7 +3446,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.965 50.8) (xy 100.965 60.96)
+			(xy 99.06 52.07) (xy 99.06 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3463,6 +3473,16 @@
 			(type default)
 		)
 		(uuid "f77fee29-91da-48f6-856c-3640c61d11aa")
+	)
+	(wire
+		(pts
+			(xy 99.06 60.96) (xy 95.25 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f80158d9-a957-4d29-a93b-fa237de6844c")
 	)
 	(wire
 		(pts
@@ -4167,7 +4187,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 100.965 46.99 0)
+		(at 99.06 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4175,7 +4195,7 @@
 		(dnp no)
 		(uuid "2c95cc22-04b9-485b-8977-d1e069e55e89")
 		(property "Reference" "R16"
-			(at 98.425 46.355 0)
+			(at 96.52 47.625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4183,7 +4203,7 @@
 			)
 		)
 		(property "Value" "220k"
-			(at 98.425 48.26 0)
+			(at 96.52 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4191,7 +4211,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 101.981 47.244 90)
+			(at 100.076 48.514 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4200,7 +4220,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.965 46.99 0)
+			(at 99.06 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4209,7 +4229,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 100.965 46.99 0)
+			(at 99.06 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4218,7 +4238,7 @@
 			)
 		)
 		(property "DigiKey" "A126350CT-ND"
-			(at -120.015 165.1 0)
+			(at -121.92 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4227,7 +4247,7 @@
 			)
 		)
 		(property "Manufacturer" "TE Connectivity Passive Product"
-			(at 12.7 96.52 0)
+			(at 10.795 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4236,7 +4256,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "CRG0805F220K"
-			(at 12.7 96.52 0)
+			(at 10.795 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4479,7 +4499,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
 			(at 193.04 33.02 0)
 			(effects
 				(font
@@ -4991,6 +5011,100 @@
 			(project "integration_elec_slave"
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
 					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 102.87 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d55b97f-4a3c-4c71-8863-78a20b25bd91")
+		(property "Reference" "R29"
+			(at 101.6 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 101.6 135.255 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 103.886 131.064 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-10.0KCRCT-ND"
+			(at -118.11 248.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 14.605 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0805FR-0710KL"
+			(at 14.605 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "58d10910-963c-459b-9ee8-1e5dadc4bb82")
+		)
+		(pin "2"
+			(uuid "52751194-5712-4751-9ad4-6589a5308056")
+		)
+		(instances
+			(project "integration_elec_slave"
+				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -6069,7 +6183,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 103.505 56.515 180)
+		(at 102.87 57.15 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6077,7 +6191,7 @@
 		(dnp no)
 		(uuid "7dd47a08-ad8b-4295-8274-e991a8eaf535")
 		(property "Reference" "C24"
-			(at 96.901 56.261 0)
+			(at 96.266 56.896 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6086,7 +6200,7 @@
 			)
 		)
 		(property "Value" "6.8nF"
-			(at 96.647 58.293 0)
+			(at 96.012 58.928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6095,7 +6209,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 103.505 56.515 0)
+			(at 102.87 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6104,7 +6218,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 103.505 56.515 0)
+			(at 102.87 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6113,7 +6227,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 103.505 56.515 0)
+			(at 102.87 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6122,7 +6236,7 @@
 			)
 		)
 		(property "DigiKey" "399-C0805C682K5RAC7800TR-ND"
-			(at 103.505 56.515 90)
+			(at 102.87 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6131,7 +6245,7 @@
 			)
 		)
 		(property "Manufacturer" "KEMET"
-			(at 103.505 56.515 90)
+			(at 102.87 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6140,7 +6254,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "C0805C682K5RAC7800"
-			(at 103.505 56.515 90)
+			(at 102.87 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6382,7 +6496,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_Plated_Hole_D2.0mm"
 			(at 195.58 114.3 0)
 			(effects
 				(font
@@ -6957,100 +7071,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 103.505 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba092378-8a2e-4017-a583-5f43d161fd31")
-		(property "Reference" "R17"
-			(at 108.585 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 108.585 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 104.521 49.784 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 103.505 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 103.505 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DigiKey" "311-10.0KCRCT-ND"
-			(at -117.475 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 15.24 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "RC0805FR-0710KL"
-			(at 15.24 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fb09ccce-ae49-412c-85c3-4a6cc1f54159")
-		)
-		(pin "2"
-			(uuid "7f78805c-809c-4ff3-a4b8-3f19ae1cfa8f")
-		)
-		(instances
-			(project "integration_elec_slave"
-				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
-					(reference "R17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 208.28 38.1 0)
 		(unit 1)
@@ -7501,6 +7521,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 102.87 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d4bdcc51-b71a-4984-bc54-28debdbfad23")
+		(property "Reference" "R17"
+			(at 101.6 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 101.6 53.975 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 103.886 49.784 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 102.87 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-10.0KCRCT-ND"
+			(at -118.11 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 14.605 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0805FR-0710KL"
+			(at 14.605 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4d56ac4-1cfd-4ffa-bb2a-20421fbd65d4")
+		)
+		(pin "2"
+			(uuid "33ac7c4d-399a-4a52-8c39-2bac4ac6bac9")
+		)
+		(instances
+			(project "integration_elec_slave"
+				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 198.12 61.595 0)
 		(unit 1)
@@ -7617,7 +7731,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey" ""
+		(property "DigiKey" "311-19.1KCRCT-ND"
 			(at -63.5 243.84 0)
 			(effects
 				(font
@@ -8073,100 +8187,6 @@
 			(project ""
 				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
 					(reference "#PWR028")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 102.87 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f611ca95-59fc-41cf-99da-df78e96796cb")
-		(property "Reference" "R29"
-			(at 107.95 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 107.95 131.445 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 103.886 131.064 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 102.87 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 102.87 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DigiKey" "311-10.0KCRCT-ND"
-			(at -118.11 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 14.605 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "RC0805FR-0710KL"
-			(at 14.605 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5c52696e-57d6-4452-b539-12c7dd260515")
-		)
-		(pin "2"
-			(uuid "44d4e539-8ced-42ee-af57-5b3bb3060856")
-		)
-		(instances
-			(project "integration_elec_slave"
-				(path "/f8f45849-17b1-4cdb-b0ac-47b1208e44f3/408e7880-979e-40de-9541-c2200e8ca76c"
-					(reference "R29")
 					(unit 1)
 				)
 			)
