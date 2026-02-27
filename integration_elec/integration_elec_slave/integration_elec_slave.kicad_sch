@@ -5,15 +5,11 @@
 	(uuid "f8f45849-17b1-4cdb-b0ac-47b1208e44f3")
 	(paper "A4")
 	(lib_symbols)
-	(bus
-		(pts
-			(xy 209.55 66.04) (xy 209.55 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0226976a-1553-4dac-8983-1b64e333e94c")
+	(junction
+		(at 113.03 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9b972296-acdc-4606-bba8-da3a7c73171f")
 	)
 	(bus
 		(pts
@@ -37,7 +33,7 @@
 	)
 	(bus
 		(pts
-			(xy 113.03 132.08) (xy 113.03 97.79)
+			(xy 113.03 132.08) (xy 113.03 110.49)
 		)
 		(stroke
 			(width 0)
@@ -47,13 +43,33 @@
 	)
 	(bus
 		(pts
-			(xy 130.81 74.93) (xy 101.6 74.93)
+			(xy 101.6 71.12) (xy 139.7 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1ae39986-2a4c-412f-a490-7593978362da")
+	)
+	(bus
+		(pts
+			(xy 113.03 110.49) (xy 113.03 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22449b09-6685-43f4-9eb5-77b709e312d2")
+	)
+	(bus
+		(pts
+			(xy 55.88 110.49) (xy 113.03 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2be8ae1d-60f7-4976-9144-6ec30dd2ca8c")
 	)
 	(bus
 		(pts
@@ -97,16 +113,6 @@
 	)
 	(bus
 		(pts
-			(xy 130.81 71.12) (xy 130.81 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6019e999-b605-4ad5-bce3-3b44ad24ff69")
-	)
-	(bus
-		(pts
 			(xy 99.06 132.08) (xy 113.03 132.08)
 		)
 		(stroke
@@ -114,16 +120,6 @@
 			(type default)
 		)
 		(uuid "68e80073-c8a6-4bf3-8fb2-2134534e41ff")
-	)
-	(bus
-		(pts
-			(xy 130.81 71.12) (xy 139.7 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "691bff14-3e5a-4f41-b914-8dcbf6b41c11")
 	)
 	(bus
 		(pts
@@ -137,17 +133,17 @@
 	)
 	(bus
 		(pts
-			(xy 209.55 64.77) (xy 220.98 64.77)
+			(xy 55.88 91.44) (xy 55.88 110.49)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5850d9d-8ff7-4097-bf1e-0e1131c23a6f")
+		(uuid "ae86a142-65ed-4ab9-9d47-209071bac610")
 	)
 	(bus
 		(pts
-			(xy 196.85 66.04) (xy 209.55 66.04)
+			(xy 196.85 66.04) (xy 220.9799 66.04)
 		)
 		(stroke
 			(width 0)
@@ -176,8 +172,8 @@
 		(uuid "fd7c9316-f229-4bb7-8f95-39958a170ae3")
 	)
 	(sheet
-		(at 17.272 17.272)
-		(size 54.61 19.05)
+		(at 17.272 74.422)
+		(size 54.61 17.018)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -192,7 +188,7 @@
 		)
 		(uuid "408e7880-979e-40de-9541-c2200e8ca76c")
 		(property "Sheetname" "Regulator"
-			(at 17.272 16.5604 0)
+			(at 16.5604 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -201,12 +197,22 @@
 			)
 		)
 		(property "Sheetfile" "Regulator.kicad_sch"
-			(at 17.272 36.9066 0)
+			(at 72.4666 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "{USB}" input
+			(at 55.88 91.44 270)
+			(uuid "61c37c20-5fde-4bb9-bb4c-cdd3869f5a42")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -352,7 +358,7 @@
 		)
 	)
 	(sheet
-		(at 81.28 68.58)
+		(at 81.28 64.77)
 		(size 20.32 19.05)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -368,7 +374,7 @@
 		)
 		(uuid "b0a0cc4c-fc88-458b-9c77-f065f39e4cf1")
 		(property "Sheetname" "XBEE"
-			(at 81.28 67.8684 0)
+			(at 81.28 64.0584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -377,7 +383,7 @@
 			)
 		)
 		(property "Sheetfile" "XBEE.kicad_sch"
-			(at 81.28 88.2146 0)
+			(at 81.28 84.4046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -386,7 +392,7 @@
 			)
 		)
 		(pin "RF{XBEE}" bidirectional
-			(at 101.6 74.93 0)
+			(at 101.6 71.12 0)
 			(uuid "793a8615-c78f-4dcb-bf9b-f92645c04257")
 			(effects
 				(font
@@ -404,7 +410,7 @@
 		)
 	)
 	(sheet
-		(at 220.98 43.18)
+		(at 220.9799 44.45)
 		(size 45.72 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -420,7 +426,7 @@
 		)
 		(uuid "b78ff08f-223f-490f-884b-fdd72220c51f")
 		(property "Sheetname" "GESTION_ALIM"
-			(at 220.2684 81.2799 90)
+			(at 220.2683 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -429,7 +435,7 @@
 			)
 		)
 		(property "Sheetfile" "GESTION_ALIM.kicad_sch"
-			(at 267.2846 81.2799 90)
+			(at 267.2845 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -438,7 +444,7 @@
 			)
 		)
 		(pin "{ELECTROVANNE_CTRL}" input
-			(at 257.8101 81.28 270)
+			(at 257.81 82.55 270)
 			(uuid "3cb2d682-2cad-4fb6-a537-932cf3a5ade0")
 			(effects
 				(font
@@ -448,7 +454,7 @@
 			)
 		)
 		(pin "{MCU_CTRL}" input
-			(at 220.98 64.77 180)
+			(at 220.9799 66.04 180)
 			(uuid "cb5f9993-8bc6-461f-98a0-b276095c90dc")
 			(effects
 				(font
