@@ -329,7 +329,7 @@
 		(uuid "500f0596-b176-42f8-a775-0357a8e2bb3a")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/emile/Desktop/MEC8370/PI4/integration_elec/3D_PARTS/RELAY8_J104D2C12VDC_20S_CRS.step"
+	(model "/home/emile/MEC8370/PI4/integration_elec/3D_PARTS/RELAY8_J104D2C12VDC_20S_CRS.step"
 		(offset
 			(xyz 0 0 0)
 		)
