@@ -2707,6 +2707,42 @@
 		(uuid "fc666e73-2d08-4bcc-8ce6-d898c5274009")
 	)
 	(no_connect
+		(at 156.21 104.14)
+		(uuid "07efe81a-451d-4636-bd37-b4ad6bfe5324")
+	)
+	(no_connect
+		(at 156.21 116.84)
+		(uuid "2bef87ee-aed6-4fa8-8056-63beb3896190")
+	)
+	(no_connect
+		(at 191.77 116.84)
+		(uuid "301b1800-c5d0-46c4-bdcc-655d1452e549")
+	)
+	(no_connect
+		(at 191.77 66.04)
+		(uuid "36f24853-7a0b-4adc-b9ce-5a58f9499f23")
+	)
+	(no_connect
+		(at 156.21 121.92)
+		(uuid "3779d8ef-88da-4a12-b060-159c5a364f0b")
+	)
+	(no_connect
+		(at 191.77 124.46)
+		(uuid "3e261ed5-be44-4bbd-adcb-b1768206b42e")
+	)
+	(no_connect
+		(at 156.21 129.54)
+		(uuid "3f580beb-0fd7-4e49-8529-29067cd1751d")
+	)
+	(no_connect
+		(at 191.77 73.66)
+		(uuid "41979fa0-a68f-4487-9cfa-7e40fba2177b")
+	)
+	(no_connect
+		(at 191.77 68.58)
+		(uuid "41d07148-822d-4a86-a346-2632d713b851")
+	)
+	(no_connect
 		(at 156.21 139.7)
 		(uuid "4c4031b0-eb70-469a-b6b9-85bac156694d")
 	)
@@ -2715,8 +2751,52 @@
 		(uuid "594f7f8c-6c94-480f-9d9e-abc48f4db5aa")
 	)
 	(no_connect
+		(at 156.21 132.08)
+		(uuid "60445f99-04ec-4b1d-9eeb-eab20712574a")
+	)
+	(no_connect
+		(at 156.21 109.22)
+		(uuid "745f636d-f68b-49b2-a03a-00a56e59976e")
+	)
+	(no_connect
+		(at 156.21 106.68)
+		(uuid "8f3e0961-411a-44b8-8b3e-cf83a740fd87")
+	)
+	(no_connect
+		(at 191.77 127)
+		(uuid "92fa536b-d224-4b82-90d2-c7986dc92390")
+	)
+	(no_connect
 		(at 191.77 78.74)
 		(uuid "9561ed30-632a-4d20-a222-162d1020433f")
+	)
+	(no_connect
+		(at 191.77 109.22)
+		(uuid "a0f7fce0-3113-4d3b-92b1-de74d87052b7")
+	)
+	(no_connect
+		(at 191.77 60.96)
+		(uuid "a740a206-3e8e-4ad5-a1a9-04fb46ec4b64")
+	)
+	(no_connect
+		(at 156.21 119.38)
+		(uuid "b323fff0-50a5-4de7-a976-899d497f0d13")
+	)
+	(no_connect
+		(at 156.21 96.52)
+		(uuid "bce3a854-f3d7-4f8b-9b23-6d9f03d1d18f")
+	)
+	(no_connect
+		(at 191.77 63.5)
+		(uuid "cb0d5924-b9b9-4199-a43b-7d669072a9e0")
+	)
+	(no_connect
+		(at 191.77 71.12)
+		(uuid "d1b3ec4d-cedb-4b92-80e5-57c4eb109c25")
+	)
+	(no_connect
+		(at 156.21 134.62)
+		(uuid "d8c98ff2-7399-4ff3-a276-211e0c038a79")
 	)
 	(no_connect
 		(at 191.77 76.2)
