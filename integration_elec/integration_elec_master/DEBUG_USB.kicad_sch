@@ -3605,7 +3605,7 @@
 		(at 163.83 24.13 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5293,6 +5293,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "311-5.10KHRCT-ND"
+			(at 238.76 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ec454055-9ddc-4f55-b465-b19c496d6261")
 		)
@@ -5621,6 +5630,15 @@
 			)
 		)
 		(property "STANDARD" ""
+			(at 231.14 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "311-5.10KHRCT-ND"
 			(at 231.14 36.83 0)
 			(effects
 				(font

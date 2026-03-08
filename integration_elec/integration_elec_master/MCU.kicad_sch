@@ -7000,6 +7000,15 @@
 				(hide yes)
 			)
 		)
+		(property "DigiKey" "RMCF0805ZT0R00CT-ND"
+			(at 26.67 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "448fc077-b472-487b-8f68-59484999c09e")
 		)
@@ -7854,6 +7863,15 @@
 		)
 		(property "Description" "Resistor, US symbol"
 			(at 233.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "RMCF0805ZT0R00CT-ND"
+			(at 233.68 58.42 90)
 			(effects
 				(font
 					(size 1.27 1.27)
