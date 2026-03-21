@@ -1,0 +1,17 @@
+// Auteur : Émile Mayer
+// Date de création 20 mars
+// Date de modfication 20 mars
+// PI4
+
+#include "ads1015.h"
+
+int ADS1015_init(){
+	//todo : écriture dans les registres de config pour les bonnes configurations
+	//todo : s'assurer qu'il n'y ait pas de problème avec le HAL
+	//todo : confirmer le fonctionnement du transfert I2C avec le DMA
+}
+
+void ADS1015_routine(){
+	//todo : appeler cette fonction lors d'un interrupt de l'ADC (signifie conversion faite)
+	//todo : écrire dans un buffer l'information (utiliser le DMA)
+}

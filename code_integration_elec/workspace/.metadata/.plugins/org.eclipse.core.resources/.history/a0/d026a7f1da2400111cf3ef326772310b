@@ -1,0 +1,17 @@
+// Auteur : Émile Mayer
+// Date de création 20 mars
+// Date de modfication 20 mars
+// PI4
+
+
+#ifndef __ADS1015_H__
+#define __ADS1015_H__
+
+#include "main.h"
+
+int ADS1015_init(void);
+void ADS1015_routine(void);
+
+
+
+#endif /* __ASD1015_H__*/
