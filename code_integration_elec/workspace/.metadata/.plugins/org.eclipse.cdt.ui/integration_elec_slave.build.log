@@ -1,16 +1,17 @@
-10:22:02 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+11:50:24 **** Incremental Build of configuration Debug for project integration_elec_slave ****
 make -j20 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:100:3: warning: implicit declaration of function 'XBEE_INIT' [-Wimplicit-function-declaration]
-  100 |   XBEE_INIT();
-      |   ^~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/xbee.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/xbee.d" -MT"Core/Src/xbee.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/xbee.o"
 arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
-C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:100:(.text.main+0x20): undefined reference to `XBEE_INIT'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:64: integration_elec_slave.elf] Error 1
-"make -j20 all" terminated with exit code 2. Build might be incomplete.
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  18280	     12	   3372	  21664	   54a0	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
 
-10:22:02 Build Failed. 2 errors, 1 warnings. (took 485ms)
+11:50:25 Build Finished. 0 errors, 0 warnings. (took 994ms)
 

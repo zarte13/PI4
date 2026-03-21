@@ -1737,3 +1737,631 @@ C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/
 collect2.exe: error: ld returned 1 exit status
 make: *** [makefile:64: integration_elec_slave.elf] Error 1
 "make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:17:33 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:17:34 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:3: warning: implicit declaration of function 'XBEE_INIT' [-Wimplicit-function-declaration]
+  100 |   XBEE_INIT();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:100:(.text.main+0x20): undefined reference to `XBEE_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: integration_elec_slave.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:18:49 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:18:50 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:100:(.text.main+0x20): undefined reference to `XBEE_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: integration_elec_slave.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:49:20 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:49:21 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+arm-none-eabi-gcc "../Core/Src/xbee.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/xbee.d" -MT"Core/Src/xbee.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/xbee.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:100:(.text.main+0x20): undefined reference to `XBEE_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: integration_elec_slave.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:49:39 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:49:39 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'XBEE_INIT' [-Wimplicit-function-declaration]
+  101 |   XBEE_INIT();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:101:(.text.main+0x20): undefined reference to `XBEE_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: integration_elec_slave.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:50:03 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:50:03 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/xbee.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/xbee.d" -MT"Core/Src/xbee.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/xbee.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/MEC8370/integration_elec/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:101:(.text.main+0x20): undefined reference to `XBEE_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: integration_elec_slave.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:50:23 **** Incremental Build of configuration Debug for project E11_COM ****
+make -j20 all 
+arm-none-eabi-gcc "../Services/CommunicationController/Src/ComunicationControler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -DCAN_USE_PORT1 -DCOM_BOARD -DSTM32Esteban -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Core/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Middlewares/Third_Party/FatFs/src" -I../Middlewares/Third_Party/FatFs/src -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/HW_Config" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Reception" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Interpreter/CanMain/Transmit" -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/BoardID" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Can2Def" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/CanDef" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Cobs" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Eeprom" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/ErrorDef/Legacy" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCAN" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanCOM" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanSystem" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/EstebanUSB" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Parameters" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Serial" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/SystemErrors" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Global" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/Gps/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeLTE/Src" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Inc" -I"C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/XbeeRF/Src" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Services/CommunicationController/Src/ComunicationControler.d" -MT"Services/CommunicationController/Src/ComunicationControler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Services/CommunicationController/Src/ComunicationControler.o"
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'commTask':
+../Services/CommunicationController/Src/ComunicationControler.c:135:41: warning: implicit declaration of function 'XBeeRF_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  135 |                 if (RF_Present)         XBeeRF_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c:136:41: warning: implicit declaration of function 'LTE_PutCanMsg'; did you mean 'SD_PutCanMsg'? [-Wimplicit-function-declaration]
+  136 |                 if (LTE_Present)        LTE_PutCanMsg(msg);
+      |                                         ^~~~~~~~~~~~~
+      |                                         SD_PutCanMsg
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'HAL_UART_RxCpltCallback':
+../Services/CommunicationController/Src/ComunicationControler.c:166:9: warning: implicit declaration of function 'XBeeRF_DMA_SW'; did you mean 'XBeeRF_Task'? [-Wimplicit-function-declaration]
+  166 |         XBeeRF_DMA_SW();
+      |         ^~~~~~~~~~~~~
+      |         XBeeRF_Task
+../Services/CommunicationController/Src/ComunicationControler.c:168:9: warning: implicit declaration of function 'LTE_DMA_SW' [-Wimplicit-function-declaration]
+  168 |         LTE_DMA_SW();
+      |         ^~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceived':
+../Services/CommunicationController/Src/ComunicationControler.c:205:9: warning: implicit declaration of function 'sendCANMessage'; did you mean 'stringToCANMessage'? [-Wimplicit-function-declaration]
+  205 |         sendCANMessage(msg);
+      |         ^~~~~~~~~~~~~~
+      |         stringToCANMessage
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'CANMessageReceive':
+../Services/CommunicationController/Src/ComunicationControler.c:216:25: error: 'sCANMessage_t' has no member named 'adress'; did you mean 'address'?
+  216 |         if(canRxMessage.adress==COM_SET_TARGET_SPEED && canRxMessage.valid==true){
+      |                         ^~~~~~
+      |                         address
+../Services/CommunicationController/Src/ComunicationControler.c:226:17: warning: implicit declaration of function 'XBeeRF_ChangeStatus' [-Wimplicit-function-declaration]
+  226 |                 XBeeRF_ChangeStatus(IN_RANGE);
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateComStateData':
+../Services/CommunicationController/Src/ComunicationControler.c:253:32: warning: implicit declaration of function 'XBeeRF_getStatus' [-Wimplicit-function-declaration]
+  253 |         COMSTATUS->RF_Status = XBeeRF_getStatus();
+      |                                ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:254:33: warning: implicit declaration of function 'LTE_getStatus' [-Wimplicit-function-declaration]
+  254 |         COMSTATUS->LTE_Status = LTE_getStatus();
+      |                                 ^~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:255:39: warning: implicit declaration of function 'LTE_getSignalStrength_bar' [-Wimplicit-function-declaration]
+  255 |         COMSTATUS->LTE_Strength_Bar = LTE_getSignalStrength_bar();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:256:39: warning: implicit declaration of function 'LTE_getSignalStrength_dBm' [-Wimplicit-function-declaration]
+  256 |         COMSTATUS->LTE_Strength_dBm = LTE_getSignalStrength_dBm();
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c: In function 'updateTxDATE_TIME':
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: implicit declaration of function 'LTE_getDateTime' [-Wimplicit-function-declaration]
+  264 |         uint8_t* tempP = LTE_getDateTime();
+      |                          ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:264:26: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:10:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h: At top level:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:30:13: warning: 'sCANMessageTransmitPut' declared 'static' but never defined [-Wunused-function]
+   30 | static void sCANMessageTransmitPut(sCANMessage_t * CANmessage);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Services/CommunicationController/Src/ComunicationControler.c:11:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:31:17: warning: 'getBufferSizeSD' declared 'static' but never defined [-Wunused-function]
+   31 | static uint32_t getBufferSizeSD(void);
+      |                 ^~~~~~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/uSD_card/Inc/uSD_card.h:32:22: warning: 'canBufferReadSD' declared 'static' but never defined [-Wunused-function]
+   32 | static sCANMessage_t canBufferReadSD(void);
+      |                      ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:47:17: warning: 'nextTxLoopCheck_Time' defined but not used [-Wunused-variable]
+   47 | static uint32_t nextTxLoopCheck_Time=0;
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:44:17: warning: 'nextTxStatusTime' defined but not used [-Wunused-variable]
+   44 | static uint32_t nextTxStatusTime=0;
+      |                 ^~~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:36:17: warning: 'canMessageTxPut' defined but not used [-Wunused-variable]
+   36 | static uint16_t canMessageTxPut=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:35:17: warning: 'canMessageTxGet' defined but not used [-Wunused-variable]
+   35 | static uint16_t canMessageTxGet=0;
+      |                 ^~~~~~~~~~~~~~~
+../Services/CommunicationController/Src/ComunicationControler.c:34:22: warning: 'canMessageTxFIFO' defined but not used [-Wunused-variable]
+   34 | static sCANMessage_t canMessageTxFIFO[CAN_MESSAGE_TX_FIFO_LENGTH];
+      |                      ^~~~~~~~~~~~~~~~
+In file included from C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/Services/CommunicationController/Inc/ComunicationControler.h:14:
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:40:17: warning: 'intervalPtr' defined but not used [-Wunused-variable]
+   40 | static uint32_t intervalPtr = 0;
+      |                 ^~~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:39:17: warning: 'timeoutPtr' defined but not used [-Wunused-variable]
+   39 | static uint32_t timeoutPtr = 0;
+      |                 ^~~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:38:17: warning: 'intervals' defined but not used [-Wunused-variable]
+   38 | static Interval intervals[TIMER_BUFFER_SIZE];
+      |                 ^~~~~~~~~
+C:/E11_ELEC_Git/07-COM/Firmware/COM_Code/v2/E11_Library/Timer/Timer.h:37:16: warning: 'timeouts' defined but not used [-Wunused-variable]
+   37 | static Timeout timeouts[TIMER_BUFFER_SIZE];
+      |                ^~~~~~~~
+make: *** [Services/CommunicationController/Src/subdir.mk:19: Services/CommunicationController/Src/ComunicationControler.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+11:50:24 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/xbee.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/xbee.d" -MT"Core/Src/xbee.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/xbee.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  18280	     12	   3372	  21664	   54a0	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 

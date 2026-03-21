@@ -29,6 +29,8 @@
  */
 #define ADC_INIT_MESSAGE 0x4280
 
+
+
 int ADS1015_init(void);
 void ADS1015_get_sample(void);
 

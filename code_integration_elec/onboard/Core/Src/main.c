@@ -24,6 +24,7 @@
 #include "usb_otg.h"
 #include "gpio.h"
 #include "ads1015.h"
+#include "xbee.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
