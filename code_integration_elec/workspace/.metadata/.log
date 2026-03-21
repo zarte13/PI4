@@ -415,3 +415,18 @@ java.lang.Exception: The project description file (.project) for 'E11_COM' is mi
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-03-20 23:23:58.836
 !MESSAGE Indexed 'E11_COM' (81 sources, 203 headers) in 2.35 sec: 18,979 declarations; 99,255 references; 1 unresolved inclusions; 92 syntax errors; 241 unresolved names (0.2%)
+!SESSION 2026-03-21 08:48:05.596 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-03-21 08:52:40.152
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-21 08:52:40.152
+!MESSAGE Log4j2 initialized with config file C:\MEC8370\integration_elec\PI4\code_integration_elec\workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-21 08:52:44.543
+!MESSAGE Started RMI Server, listening on port 41337

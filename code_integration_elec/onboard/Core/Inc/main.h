@@ -59,6 +59,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define INTERRUPT_ADC_Pin GPIO_PIN_0
 #define INTERRUPT_ADC_GPIO_Port GPIOC
+#define INTERRUPT_ADC_EXTI_IRQn EXTI0_IRQn
 #define XBEE_LED_Pin GPIO_PIN_4
 #define XBEE_LED_GPIO_Port GPIOC
 #define SOLENOID_1_Pin GPIO_PIN_0

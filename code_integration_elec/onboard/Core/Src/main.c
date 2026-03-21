@@ -23,6 +23,7 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
+#include "ads1015.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -105,8 +106,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  // todo : implémenter les routines de l'ADC et du XBEE
-	  // todo : implémenter les communications avec le XBEE
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -159,7 +159,11 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void  HAL_GPIO_EXTI_Callback(uint16_t GPIO_PIN){
+	if(GPIO_PIN == GPIO_PIN_0){
+		ADS1015_get_sample();
+	}
+}
 /* USER CODE END 4 */
 
 /**

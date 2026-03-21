@@ -1,1 +1,2 @@
-../Core/Src/ads1015.c:8:5:ADS1015_init	4	static
+../Core/Src/ads1015.c:8:5:ADS1015_init	16	static
+../Core/Src/ads1015.c:21:6:ADS1015_get_sample	4	static
