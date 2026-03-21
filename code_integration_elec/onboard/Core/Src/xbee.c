@@ -7,8 +7,11 @@
 #include "usart.h"
 
 
-void XBEE_INIT(){
 
+
+void XBEE_INIT(){
+	info.key = 0xFEEDCAFE;
+    HAL_GPIO_WritePin(XBEE_N_RESET_GPIO_Port,XBEE_N_RESET_Pin,GPIO_PIN_SET);
 }
 
 void XBEE_send_alive(){

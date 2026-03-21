@@ -60,8 +60,8 @@ all: main-build
 main-build: integration_elec_slave.elf secondary-outputs
 
 # Tool invocations
-integration_elec_slave.elf integration_elec_slave.map: $(OBJS) $(USER_OBJS) C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\MEC8370\integration_elec\PI4\code_integration_elec\onboard\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+integration_elec_slave.elf integration_elec_slave.map: $(OBJS) $(USER_OBJS) /home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

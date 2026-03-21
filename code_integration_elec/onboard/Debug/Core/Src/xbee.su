@@ -1,4 +1,4 @@
-../Core/Src/xbee.c:10:6:XBEE_INIT	4	static
-../Core/Src/xbee.c:14:6:XBEE_send_alive	4	static
-../Core/Src/xbee.c:17:6:XBEE_send_pressure	4	static
-../Core/Src/xbee.c:20:6:XBEE_send_valves_status	4	static
+../Core/Src/xbee.c:12:6:XBEE_INIT	8	static
+../Core/Src/xbee.c:17:6:XBEE_send_alive	4	static
+../Core/Src/xbee.c:20:6:XBEE_send_pressure	4	static
+../Core/Src/xbee.c:23:6:XBEE_send_valves_status	4	static
