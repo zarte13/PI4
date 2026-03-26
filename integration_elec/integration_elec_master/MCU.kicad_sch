@@ -2267,6 +2267,17 @@
 			"XBEE_LED" "XBEE_UART_CTS" "XBEE_UART_RTS"
 		)
 	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 234.188 88.138 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "067ceadf-6760-41f8-a3b5-fa6fe7ccea85")
+	)
 	(text "PC8 AND PC9 NEEDS TO BE PULL-DOWN\n"
 		(exclude_from_sim no)
 		(at 69.85 114.3 0)
@@ -2276,6 +2287,28 @@
 			)
 		)
 		(uuid "0bd05068-8ca3-4b77-993f-942b35428ec6")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 228.6 128.778 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "13f163f4-cc31-4ffd-ae13-f7c8cda66f93")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 228.6 131.318 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "170f46ae-d371-47ee-bcdb-bf07648bfa20")
 	)
 	(text "RESET"
 		(exclude_from_sim no)
@@ -2287,6 +2320,83 @@
 			(justify left bottom)
 		)
 		(uuid "20b8c968-1907-45c6-9810-9b3596e09159")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 225.552 67.818 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "26be4cea-3d52-4cdd-ab44-15bb2f00096d")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 143.002 79.502 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "26d22fca-797b-4360-aceb-5dd388106146")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 236.22 121.158 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "27f27c6f-d40f-4831-897a-887e9c54046b")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 224.536 65.278 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "305b89cb-b3a3-4034-9d00-a93aff38cd0c")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 227.33 62.738 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "4640df8b-6085-4633-a3fd-4d2dcbb784d5")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 236.728 103.378 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "5a58c19f-de08-4052-af7a-cda7d89430f6")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 233.934 85.598 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "8e26741e-2a6f-4b32-bb6d-e7662e6a1bf9")
 	)
 	(text "<- COULD BE PUT ON THE RESET, MIGHT BE BETTER...\n"
 		(exclude_from_sim no)
@@ -2330,6 +2440,94 @@
 			)
 		)
 		(uuid "98009850-f91e-4caf-ba55-f36635c1ce32")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 224.536 60.198 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "a5ea7e70-aa33-48f6-80e7-b202a5714f33")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 230.378 126.238 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "c2cb9d34-2507-4256-bc74-ceaba008e663")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 143.4623 85.852 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "d111adba-7839-465e-8eb0-dec44d9c5f13")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 234.95 105.918 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "deffac43-c33c-4877-821d-230d6528fdb9")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 93.218 113.538 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "e503d41c-d0f7-4376-b639-220a48c0596e")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 93.218 110.998 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "e5e91e7d-c500-4b8f-b5a0-6d9fe0016278")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 225.552 70.358 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "f36140be-60e0-4e95-af33-a205a5dd95fb")
+	)
+	(text "X"
+		(exclude_from_sim no)
+		(at 254.508 57.658 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 255 0 32 1)
+			)
+		)
+		(uuid "fcd7bf0c-7253-4997-8aa5-b5e41f3c044e")
 	)
 	(junction
 		(at 158.75 46.99)
