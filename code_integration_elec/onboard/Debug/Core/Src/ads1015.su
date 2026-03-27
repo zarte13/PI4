@@ -1,3 +1,6 @@
-../Core/Src/ads1015.c:11:5:ADS1015_init	8	static
-../Core/Src/ads1015.c:23:6:ADS1015_get_sample	8	static
-../Core/Src/ads1015.c:30:6:HAL_I2C_MasterRxCpltCallback	16	static
+../Core/Src/ads1015.c:8:6:ADS1015_Init	40	static
+../Core/Src/ads1015.c:29:6:ADS1015_StartConversion	24	static
+../Core/Src/ads1015.c:46:6:ADS1015_EXTI_Callback	24	static
+../Core/Src/ads1015.c:61:6:ADS1015_DMA_RxComplete	24	static
+../Core/Src/ads1015.c:69:9:ADS1015_GetResult	16	static
+../Core/Src/ads1015.c:74:7:ADS1015_ToVoltage	24	static

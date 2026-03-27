@@ -1,4 +1,4 @@
-../Core/Src/xbee.c:12:6:XBEE_INIT	1
-../Core/Src/xbee.c:17:6:XBEE_send_alive	1
-../Core/Src/xbee.c:20:6:XBEE_send_pressure	1
-../Core/Src/xbee.c:23:6:XBEE_send_valves_status	1
+../Core/Src/xbee.c:17:6:XBee_Reset	1
+../Core/Src/xbee.c:26:6:XBee_Send	1
+../Core/Src/xbee.c:31:6:XBee_StartReceive	1
+../Core/Src/xbee.c:36:6:HAL_UART_RxCpltCallback	4

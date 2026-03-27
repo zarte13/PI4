@@ -4,32 +4,76 @@
 // PI4
 
 #include "ads1015.h"
-static uint16_t adc_value_int;
-static uint8_t i2c_rx_buffer[2];
-static uint8_t i2c_tx_buffer[2];
 
-int ADS1015_init(){
-	//todo : écriture dans les registres de config pour les bonnes configurations
-	//todo : s'assurer qu'il n'y ait pas de problème avec le HAL
-	//todo : confirmer le fonctionnement du transfert I2C avec le DMA
-	i2c_tx_buffer[0] = (uint8_t)(ADC_INIT_MESSAGE >> 8);
-	i2c_tx_buffer[1] = (uint8_t)(ADC_INIT_MESSAGE & 0xFF);
-	if(HAL_I2C_Master_Transmit_DMA(&hi2c1,ADC_ADDRESS << 1,i2c_tx_buffer, 2)!= HAL_OK){
-		return -1;
-	}
-	return 0;
-}
+void ADS1015_Init(ADS1015_Handle *ads, I2C_HandleTypeDef *hi2c) {
+    ads->hi2c  = hi2c;
+    ads->state = ADS1015_IDLE;
 
-void ADS1015_get_sample(){
-	//todo : appeler cette fonction lors d'un interrupt de l'ADC (signifie conversion faite)
-	//todo : écrire dans un buffer l'information (utiliser le DMA)
-	HAL_I2C_Master_Receive_DMA(&hi2c1, ADC_ADDRESS << 1,i2c_rx_buffer, 2);
-	//todo : écrire la valeur numérique de la pression
-}
+    uint8_t buf[3];
+    HAL_StatusTypeDef ret;
 
-void HAL_I2C_MasterRxCpltCallback(I2C_HandleTypeDef *hi2c) {
-    if (hi2c->Instance == I2C1) {
-        adc_value_int = (((uint16_t)i2c_rx_buffer[0] << 8) | (i2c_rx_buffer[1])) >> 4;
-        // C'est ici que tu peux convertir en pression (ex: pression = adc_value_int * constante)
+    buf[0] = ADS1015_REG_LO_THRESH;
+    buf[1] = 0x00; buf[2] = 0x00;
+    ret = HAL_I2C_Master_Transmit(ads->hi2c, ADS1015_ADDR, buf, 3, HAL_MAX_DELAY);
+    if (ret != HAL_OK) { /* Breakpoint ici — adresse I2C wronge ou bus bloqué */ }
+
+    buf[0] = ADS1015_REG_HI_THRESH;
+    buf[1] = 0x80; buf[2] = 0x00;
+    ret = HAL_I2C_Master_Transmit(ads->hi2c, ADS1015_ADDR, buf, 3, HAL_MAX_DELAY);
+    if (ret != HAL_OK) {
+    	int oof = 69;
+    	int miaw = 0;
     }
+}
+
+void ADS1015_StartConversion(ADS1015_Handle *ads) {
+    if (ads->state != ADS1015_IDLE) return;
+
+    uint16_t config = ADS1015_CONFIG_DEFAULT;
+    ads->tx_buf[0] = ADS1015_REG_CONFIG;
+    ads->tx_buf[1] = (config >> 8) & 0xFF;
+    ads->tx_buf[2] = (config)      & 0xFF;
+
+    ads->state = ADS1015_WAITING_CONVERSION;
+
+    HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit_DMA(ads->hi2c, ADS1015_ADDR, ads->tx_buf, 3);
+    if (ret != HAL_OK) {
+        ads->state = ADS1015_IDLE;  // Breakpoint ici — I2C fail
+    }
+}
+
+// Appelé depuis HAL_GPIO_EXTI_Callback quand ALERT/RDY tombe bas
+void ADS1015_EXTI_Callback(ADS1015_Handle *ads) {
+    if (ads->state != ADS1015_WAITING_CONVERSION) return;
+
+    ads->state = ADS1015_READING;
+
+    // Write registre + Read 2 octets — tout en DMA, une seule transaction
+    HAL_I2C_Mem_Read_DMA(ads->hi2c,
+                          ADS1015_ADDR,
+                          ADS1015_REG_CONVERSION,
+                          I2C_MEMADD_SIZE_8BIT,
+                          ads->rx_buf,
+                          2);
+}
+
+// Appelé depuis HAL_I2C_MasterRxCpltCallback
+void ADS1015_DMA_RxComplete(ADS1015_Handle *ads) {
+    if (ads->state != ADS1015_READING) return;
+
+    int16_t raw = ((int16_t)(ads->rx_buf[0] << 8) | ads->rx_buf[1]) >> 4; // 12 bits
+    ads->result = raw;
+    ads->state  = ADS1015_DATA_READY;
+}
+
+int16_t ADS1015_GetResult(ADS1015_Handle *ads) {
+    ads->state = ADS1015_IDLE;
+    return ads->result;
+}
+
+float ADS1015_ToVoltage(int16_t raw) {
+    // PGA = ±2.048V → LSB = 1 mV
+	float tension = (float)raw * 0.002f*3/2;
+	float pression = tension/5 * 120;
+    return pression;
 }

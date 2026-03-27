@@ -23,12 +23,11 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
-#include "ads1015.h"
-#include "xbee.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "ads1015.h"
+#include "xbee.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -38,7 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define ADS1015_REG_CONV 0b00000001
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,7 +59,12 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+static ADS1015_Handle ads;
+static float voltage;
 
+static uint8_t xbee_tx_buf[] = "Le Front de libération du Québec n’est pas le Messie, ni un Robin des bois des temps modernes, c’est un regroupement de travailleurs québécois qui sont décidés à tout mettre en œuvre pour que le peuple du Québec prenne définitivement en mains son destin.";
+static uint8_t xbee_rx_buf[64];
+static uint8_t xbee_rx_byte;
 /* USER CODE END 0 */
 
 /**
@@ -98,14 +102,40 @@ int main(void)
   MX_USB_OTG_HS_PCD_Init();
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
-  XBEE_INIT();
-  ADS1015_init();
+  //XBEE_INIT();
+
+
+
+  XBee_Reset();
+  //XBee_StartReceive();
+  //HAL_UART_Receive_IT(&huart1, &temp_byte, 1);
+
+  uint8_t msg[] = "STM32 ready\r\n";
+  XBee_Send(msg, sizeof(msg)-1);
+
+
+  HAL_GPIO_WritePin(SOLENOID_1_GPIO_Port,SOLENOID_1_Pin,GPIO_PIN_RESET);
+
+  /* USER CODE BEGIN 2 */
+  ADS1015_Init(&ads, &hi2c1);
+
+  ADS1015_StartConversion(&ads);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  XBee_Send(xbee_tx_buf, sizeof(msg)-1);
+	  HAL_Delay(1000);
+	  if (ads.state == ADS1015_DATA_READY) {
+		  int16_t raw     = ADS1015_GetResult(&ads);
+		  voltage = ADS1015_ToVoltage(raw);
+
+		  // Traiter la donnée...
+		  // puis relancer
+		  ADS1015_StartConversion(&ads);
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -160,11 +190,19 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void  HAL_GPIO_EXTI_Callback(uint16_t GPIO_PIN){
-	if(GPIO_PIN == GPIO_PIN_0){
-		ADS1015_get_sample();
-	}
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+    if (GPIO_Pin == INTERRUPT_ADC_Pin) {
+        ADS1015_EXTI_Callback(&ads);
+    }
 }
+
+void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c) {
+    if (hi2c == &hi2c1) {
+        ADS1015_DMA_RxComplete(&ads);
+    }
+}
+
+
 /* USER CODE END 4 */
 
 /**

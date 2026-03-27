@@ -11,28 +11,53 @@
 #include "dma.h"
 #include "i2c.h"
 
-//Macro values defines
-#define ADC_ADDRESS 0b1001000
-#define ADC_ADDR_CONV_REG 0b0000000
-#define ADC_ADDR_CONFIG_REG 0b00000001
-#define ADC_INIT_MESSAGE 0x4280
-/*
- * [15] : OS, 0
- * [14:12] : Canal de lecture, 100 est la mesure entre AIN0 et GND (diviseur de tension)
- * [11:9] : FSR, 001 donne un FSR de ±4.096V
- * [8] : MODE, 0 -> continuous conversion mode
- * [7:5] : 100 -> data rate, garde par défaut
- * [4] : 0 -> COMP_MODE
- * [3] : 0 -> COMP_POL
- * [2] : 0 -> COMP_LAT
- * [1:0] : 00 -> COMP_QUE
- */
-#define ADC_INIT_MESSAGE 0x4280
+#define ADS1015_ADDR        (0x48 << 1)  // ADDR pin à GND
 
+// Registres
+#define ADS1015_REG_CONVERSION  0x00
+#define ADS1015_REG_CONFIG      0x01
+#define ADS1015_REG_LO_THRESH   0x02
+#define ADS1015_REG_HI_THRESH   0x03
 
+// Config register — valeur pour déclencher ALERT/RDY en mode conversion ready
+// MUX=AIN0/GND, PGA=±2.048V, Single-shot, 1600 SPS, ALERT/RDY active low
+#define ADS1015_CONFIG_OS       (1 << 15)   // Start single conversion
+#define ADS1015_CONFIG_MUX      (0x4 << 12) // AIN0 vs GND
+#define ADS1015_CONFIG_PGA      (0b001 << 9)  // ±2.048V
+#define ADS1015_CONFIG_MODE     (1 << 8)    // Single-shot
+#define ADS1015_CONFIG_DR       (0x5 << 5)  // 1600 SPS
+#define ADS1015_CONFIG_COMP_QUE (0x0 << 0)  // 0b00  // Assert after 1 conversion
 
-int ADS1015_init(void);
-void ADS1015_get_sample(void);
+#define ADS1015_CONFIG_DEFAULT  (ADS1015_CONFIG_OS    | \
+                                 ADS1015_CONFIG_MUX   | \
+                                 ADS1015_CONFIG_PGA   | \
+                                 ADS1015_CONFIG_MODE  | \
+                                 ADS1015_CONFIG_DR    | \
+                                 ADS1015_CONFIG_COMP_QUE)
+
+typedef enum {
+    ADS1015_IDLE,
+    ADS1015_WAITING_CONVERSION,  // Config envoyée, attente ALERT/RDY
+    ADS1015_READING,             // DMA RX en cours
+    ADS1015_DATA_READY           // Donnée disponible
+} ADS1015_State;
+
+typedef struct {
+    I2C_HandleTypeDef *hi2c;
+    volatile ADS1015_State state;
+    int16_t result;
+
+    // Buffers DMA (doivent être en RAM non-cachée sur H7/F7, sinon RAM normale)
+    uint8_t tx_buf[3];
+    uint8_t rx_buf[2];
+} ADS1015_Handle;
+
+void     ADS1015_Init(ADS1015_Handle *ads, I2C_HandleTypeDef *hi2c);
+void     ADS1015_StartConversion(ADS1015_Handle *ads);
+void     ADS1015_EXTI_Callback(ADS1015_Handle *ads);   // Appeler depuis HAL_GPIO_EXTI_Callback
+void     ADS1015_DMA_RxComplete(ADS1015_Handle *ads);  // Appeler depuis HAL_I2C_MemRxCpltCallback
+int16_t  ADS1015_GetResult(ADS1015_Handle *ads);
+float    ADS1015_ToVoltage(int16_t raw);
 
 
 
