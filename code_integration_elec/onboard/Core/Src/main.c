@@ -22,7 +22,7 @@
 #include "i2c.h"
 #include "tim.h"
 #include "usart.h"
-#include "usb_otg.h"
+#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -63,7 +63,7 @@ void SystemClock_Config(void);
 static ADS1015_Handle ads;
 static float voltage;
 
-static uint8_t xbee_tx_buf[] = "Le Front de libération du Québec n’est pas le Messie, ni un Robin des bois des temps modernes, c’est un regroupement de travailleurs québécois qui sont décidés à tout mettre en œuvre pour que le peuple du Québec prenne définitivement en mains son destin.";
+static uint8_t xbee_tx_buf[] = "eid mubarhak sheik";
 static uint8_t xbee_rx_buf[64];
 static uint8_t xbee_rx_byte;
 /* USER CODE END 0 */
@@ -100,8 +100,8 @@ int main(void)
   MX_DMA_Init();
   MX_I2C1_Init();
   MX_USART1_UART_Init();
-  MX_USB_OTG_HS_PCD_Init();
   MX_TIM2_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
   //XBEE_INIT();
@@ -128,6 +128,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  printf("le front de liberation du quebec n'Est pas un robin des bois des temps modernes");
 	  XBee_Send(xbee_tx_buf, sizeof(msg)-1);
 	  HAL_Delay(1000);
 	  if (ads.state == ADS1015_DATA_READY) {
@@ -204,7 +205,12 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c) {
     }
 }
 
-
+#include "usbd_cdc_if.h"
+int _write(int file, char *ptr, int len)
+{
+    CDC_Transmit_HS((uint8_t *)ptr, len); // Remplacer HS par FS si nécessaire
+    return len;
+}
 /* USER CODE END 4 */
 
 /**

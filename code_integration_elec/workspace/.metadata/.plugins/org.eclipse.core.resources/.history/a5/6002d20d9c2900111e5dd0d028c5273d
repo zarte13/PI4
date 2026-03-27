@@ -1,0 +1,44 @@
+// Auteur : Émile Mayer
+// Date de création 20 mars
+// Date de modfication 20 mars
+// PI4
+
+#include "xbee.h"
+#include "usart.h"
+
+
+#include "xbee.h"
+
+extern UART_HandleTypeDef huart1;
+
+static uint8_t rx_byte;
+
+void XBee_Reset(void)
+{
+    HAL_GPIO_WritePin(XBEE_RESET_PORT, XBEE_RESET_PIN, GPIO_PIN_RESET);
+    HAL_Delay(10);
+    HAL_GPIO_WritePin(XBEE_RESET_PORT, XBEE_RESET_PIN, GPIO_PIN_SET);
+    HAL_Delay(200); // attendre boot XBee
+}
+
+void XBee_Send(uint8_t *data, uint16_t len)
+{
+    HAL_UART_Transmit(XBEE_UART, data, len, HAL_MAX_DELAY);
+}
+
+void XBee_StartReceive(void)
+{
+    HAL_UART_Receive_IT(XBEE_UART, &rx_byte, 1);
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+    if (huart->Instance == USART1)
+    {
+        // Echo ou traitement
+        HAL_UART_Transmit(XBEE_UART, &rx_byte, 1, HAL_MAX_DELAY);
+
+        // Relancer
+        HAL_UART_Receive_IT(XBEE_UART, &rx_byte, 1);
+    }
+}
