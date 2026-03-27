@@ -74,6 +74,7 @@ int16_t ADS1015_GetResult(ADS1015_Handle *ads) {
 float ADS1015_ToVoltage(int16_t raw) {
     // PGA = ±2.048V → LSB = 1 mV
 	float tension = (float)raw * 0.002f*3/2;
-	float pression = tension/5 * 120;
+	float corrected_tension = tension - 0.5f;
+	float pression = corrected_tension/4 * 100;
     return pression;
 }

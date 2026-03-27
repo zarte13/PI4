@@ -20,6 +20,7 @@
 #include "main.h"
 #include "dma.h"
 #include "i2c.h"
+#include "tim.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
@@ -100,6 +101,7 @@ int main(void)
   MX_I2C1_Init();
   MX_USART1_UART_Init();
   MX_USB_OTG_HS_PCD_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
   //XBEE_INIT();

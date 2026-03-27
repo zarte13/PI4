@@ -4528,3 +4528,80 @@ Finished building: default.size.stdout
  
 Finished building: integration_elec_slave.list
  
+01:53:00 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-size  integration_elec_slave.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28860	    284	   3388	  32532	   7f14	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+01:59:09 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:25:13: warning: unused variable 'miaw' [-Wunused-variable]
+   25 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:24:13: warning: unused variable 'oof' [-Wunused-variable]
+   24 |         int oof = 69;
+      |             ^~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  28876	    284	   3388	  32548	   7f24	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+02:00:04 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:25:13: warning: unused variable 'miaw' [-Wunused-variable]
+   25 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:24:13: warning: unused variable 'oof' [-Wunused-variable]
+   24 |         int oof = 69;
+      |             ^~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  28876	    284	   3388	  32548	   7f24	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+02:03:11 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:25:13: warning: unused variable 'miaw' [-Wunused-variable]
+   25 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:24:13: warning: unused variable 'oof' [-Wunused-variable]
+   24 |         int oof = 69;
+      |             ^~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  28876	    284	   3388	  32548	   7f24	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+02:03:23 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-size  integration_elec_slave.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28876	    284	   3388	  32548	   7f24	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 

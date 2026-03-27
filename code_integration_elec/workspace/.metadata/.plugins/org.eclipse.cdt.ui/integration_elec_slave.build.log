@@ -1,23 +1,10 @@
-01:34:29 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+02:03:23 **** Incremental Build of configuration Debug for project integration_elec_slave ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:67:16: warning: 'xbee_rx_byte' defined but not used [-Wunused-variable]
-   67 | static uint8_t xbee_rx_byte;
-      |                ^~~~~~~~~~~~
-../Core/Src/main.c:66:16: warning: 'xbee_rx_buf' defined but not used [-Wunused-variable]
-   66 | static uint8_t xbee_rx_buf[64];
-      |                ^~~~~~~~~~~
-arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: integration_elec_slave.elf
- 
 arm-none-eabi-size  integration_elec_slave.elf 
-arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
    text	   data	    bss	    dec	    hex	filename
-  28860	    284	   3388	  32532	   7f14	integration_elec_slave.elf
+  28876	    284	   3388	  32548	   7f24	integration_elec_slave.elf
 Finished building: default.size.stdout
  
-Finished building: integration_elec_slave.list
- 
 
-01:34:30 Build Finished. 0 errors, 2 warnings. (took 1s.21ms)
+02:03:23 Build Finished. 0 errors, 0 warnings. (took 277ms)
 
