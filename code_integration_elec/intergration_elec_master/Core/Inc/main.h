@@ -57,6 +57,30 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define Void_Display_Reset_Pin GPIO_PIN_2
+#define Void_Display_Reset_GPIO_Port GPIOA
+#define TFT_DC_Pin GPIO_PIN_3
+#define TFT_DC_GPIO_Port GPIOA
+#define TFT_CS_Pin GPIO_PIN_4
+#define TFT_CS_GPIO_Port GPIOA
+#define XBEE_LED_Pin GPIO_PIN_4
+#define XBEE_LED_GPIO_Port GPIOC
+#define USB_VBUS_Pin GPIO_PIN_13
+#define USB_VBUS_GPIO_Port GPIOB
+#define USB_D__Pin GPIO_PIN_14
+#define USB_D__GPIO_Port GPIOB
+#define USB_D_B15_Pin GPIO_PIN_15
+#define USB_D_B15_GPIO_Port GPIOB
+#define VALVE_1_Pin GPIO_PIN_7
+#define VALVE_1_GPIO_Port GPIOC
+#define VALVE_2_Pin GPIO_PIN_8
+#define VALVE_2_GPIO_Port GPIOC
+#define XBEE_STATUS_Pin GPIO_PIN_9
+#define XBEE_STATUS_GPIO_Port GPIOC
+#define XBEE_RQ_Pin GPIO_PIN_8
+#define XBEE_RQ_GPIO_Port GPIOA
+#define XBEE_nReset_Pin GPIO_PIN_10
+#define XBEE_nReset_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
