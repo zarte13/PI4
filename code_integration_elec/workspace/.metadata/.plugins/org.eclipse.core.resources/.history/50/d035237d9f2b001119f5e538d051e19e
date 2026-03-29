@@ -1,0 +1,23 @@
+// Auteur : Émile Mayer
+// Date de création 20 mars
+// Date de modfication 20 mars
+// PI4
+
+#include "XbeeRF.h"
+#include "usart.h"
+#include "RF_Transmission.h"
+#include "RF_Reception.h"
+
+static uint8_t RF_DMA1[XBEE_RF_UART_DMA_SIZE];
+static uint8_t* RF_DMA_ptr = RF_DMA1;
+
+void XBeeRF_Init(){
+	RF_Reception_Init();
+	RF_Transmission_Init();
+}
+
+void XBeeRF_Task(){
+	RF_Reception_Task();
+//	RF_Transmission_Task();
+}
+

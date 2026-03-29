@@ -1,10 +1,10 @@
-11:58:43 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+19:10:26 **** Incremental Build of configuration Debug for project integration_elec_slave ****
 make -j8 all 
 arm-none-eabi-size  integration_elec_slave.elf 
    text	   data	    bss	    dec	    hex	filename
-  55340	    380	   9684	  65404	   ff7c	integration_elec_slave.elf
+  57248	    372	   9524	  67144	  10648	integration_elec_slave.elf
 Finished building: default.size.stdout
  
 
-11:58:44 Build Finished. 0 errors, 0 warnings. (took 387ms)
+19:10:27 Build Finished. 0 errors, 0 warnings. (took 652ms)
 

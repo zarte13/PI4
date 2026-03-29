@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;integration_elec_slave/Core/Inc/xbee.h&apos; to &apos;XbeeRF.h&apos;" description="Rename resource &apos;xbee.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/xbee.h" name="XbeeRF.h" stamp="1774730610360" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;integration_elec_slave/Core/Src/xbee.c&apos; to &apos;XbeeRF.c&apos;" description="Rename resource &apos;xbee.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/xbee.c" name="XbeeRF.c" stamp="1774730625316" updateReferences="true"/>
+</session>

@@ -1,6 +1,6 @@
-../Core/Src/ads1015.c:8:6:ADS1015_Init	2
-../Core/Src/ads1015.c:29:6:ADS1015_StartConversion	3
-../Core/Src/ads1015.c:46:6:ADS1015_EXTI_Callback	2
-../Core/Src/ads1015.c:61:6:ADS1015_DMA_RxComplete	2
-../Core/Src/ads1015.c:69:9:ADS1015_GetResult	1
-../Core/Src/ads1015.c:74:7:ADS1015_ToVoltage	1
+../Core/Src/ads1015.c:10:6:ADS1015_Init	2
+../Core/Src/ads1015.c:31:6:ADS1015_StartConversion	3
+../Core/Src/ads1015.c:48:6:ADS1015_EXTI_Callback	2
+../Core/Src/ads1015.c:63:6:ADS1015_DMA_RxComplete	2
+../Core/Src/ads1015.c:71:9:ADS1015_GetResult	1
+../Core/Src/ads1015.c:76:7:ADS1015_ToVoltage	1

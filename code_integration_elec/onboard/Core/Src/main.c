@@ -28,7 +28,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ads1015.h"
-#include "xbee.h"
+#include "XbeeRF.h"
+#include "RF_Reception.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -62,10 +64,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 static ADS1015_Handle ads;
 static float voltage;
-
-static uint8_t xbee_tx_buf[] = "eid mubarhak sheik";
-static uint8_t xbee_rx_buf[64];
-static uint8_t xbee_rx_byte;
+static Xbee_message_receive receive_msg;
+volatile static bool new_rf_message = false;
 /* USER CODE END 0 */
 
 /**
@@ -104,20 +104,13 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
-  //XBEE_INIT();
+  XBeeRF_Init();
 
-
-
-  XBee_Reset();
   //XBee_StartReceive();
   //HAL_UART_Receive_IT(&huart1, &temp_byte, 1);
 
-  uint8_t msg[] = "STM32 ready\r\n";
-  XBee_Send(msg, sizeof(msg)-1);
-
-
   HAL_GPIO_WritePin(SOLENOID_1_GPIO_Port,SOLENOID_1_Pin,GPIO_PIN_RESET);
-
+  HAL_GPIO_WritePin(SOLENOID_2_GPIO_Port,SOLENOID_2_Pin,GPIO_PIN_RESET);
   /* USER CODE BEGIN 2 */
   ADS1015_Init(&ads, &hi2c1);
 
@@ -128,9 +121,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  printf("le front de liberation du quebec n'Est pas un robin des bois des temps modernes");
-	  XBee_Send(xbee_tx_buf, sizeof(msg)-1);
-	  HAL_Delay(1000);
+	  XBeeRF_Task();
+	  //HAL_Delay(1000);
+	  //printf("miaw\r\n");
 	  if (ads.state == ADS1015_DATA_READY) {
 		  int16_t raw     = ADS1015_GetResult(&ads);
 		  voltage = ADS1015_ToVoltage(raw);
@@ -138,6 +131,28 @@ int main(void)
 		  // Traiter la donnée...
 		  // puis relancer
 		  ADS1015_StartConversion(&ads);
+	  }
+
+	  if (new_rf_message){
+	      new_rf_message = false;
+
+	      if ((receive_msg.start_receive == 0xFEEDCACA) &&
+	          (receive_msg.fin_receive   == 0xBEEFCAFE)){
+	    	  printf("caliss:%lu",receive_msg.start_receive);
+
+	          HAL_GPIO_WritePin(SOLENOID_1_GPIO_Port, SOLENOID_1_Pin,
+	              receive_msg.message_receive_valve1 == 1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	          HAL_GPIO_WritePin(SOLENOID_2_GPIO_Port, SOLENOID_2_Pin,
+	              receive_msg.message_receive_valve2 == 1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	          printf("valve1=%lu valve2=%lu\r\n",
+	                 receive_msg.message_receive_valve1,
+	                 receive_msg.message_receive_valve2);
+	      }
+	      else {
+	          printf("Message invalide\r\n");
+	      }
 	  }
     /* USER CODE END WHILE */
 
@@ -210,6 +225,14 @@ int _write(int file, char *ptr, int len)
 {
     CDC_Transmit_HS((uint8_t *)ptr, len); // Remplacer HS par FS si nécessaire
     return len;
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+    if (huart->Instance == USART1){
+        memcpy(&receive_msg, rx_uart_buffer, sizeof(Xbee_message_receive));
+        new_rf_message = true;
+        HAL_UART_Receive_IT(&XBEE_RF_UART_HANDLE, rx_uart_buffer, sizeof(Xbee_message_receive));
+    }
 }
 /* USER CODE END 4 */
 

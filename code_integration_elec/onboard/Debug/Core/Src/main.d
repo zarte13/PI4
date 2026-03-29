@@ -37,7 +37,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/gpio.h \
  ../Core/Inc/ads1015.h ../Core/Inc/dma.h ../Core/Inc/i2c.h \
- ../Core/Inc/xbee.h ../Core/Inc/gpio.h ../Core/Inc/usart.h \
+ ../Core/Inc/XbeeRF.h ../Core/Inc/gpio.h ../Core/Inc/usart.h \
+ ../Core/Inc/XbeeRF.h ../Core/Inc/RF_Reception.h \
  ../USB_DEVICE/App/usbd_cdc_if.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
@@ -91,9 +92,11 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/ads1015.h:
 ../Core/Inc/dma.h:
 ../Core/Inc/i2c.h:
-../Core/Inc/xbee.h:
+../Core/Inc/XbeeRF.h:
 ../Core/Inc/gpio.h:
 ../Core/Inc/usart.h:
+../Core/Inc/XbeeRF.h:
+../Core/Inc/RF_Reception.h:
 ../USB_DEVICE/App/usbd_cdc_if.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
 ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:

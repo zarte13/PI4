@@ -10,6 +10,7 @@
 #include "main.h"
 #include "dma.h"
 #include "i2c.h"
+#include "XbeeRF.h"
 
 #define ADS1015_ADDR        (0x48 << 1)  // ADDR pin à GND
 

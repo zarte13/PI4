@@ -1,0 +1,52 @@
+////////////////////////////////////////////////////////////////////////////////
+/// \file    RF_Transmission.c
+/// \version Derniere entre : 2025-01-08
+/// Copyright (c) 2020 Projet Esteban, voiture solaire, All rights reserved.
+///
+/// L'implmentation du controleur du module cellulaire LTE Categorie 1
+////////////////////////////////////////////////////////////////////////////////
+
+#include "XbeeRF.h"
+
+
+//
+// 	Current CAN message to send
+//
+static char canMsgBinary[20];
+static uint8_t canMsgToSendLength=0;
+static uint8_t canMsgToSendPnt=0;
+static bool canMsgSending=false;
+Xbee_Message xbee_msg = {0xBEEFCAFE, 0, 0xFEEDCAFE};
+
+
+void RF_Transmission_Init(void){
+    // Make sure nRst is HIGH so the reset is FALSE
+    HAL_GPIO_WritePin(XBEE_N_RESET_GPIO_Port,XBEE_N_RESET_Pin,GPIO_PIN_SET);
+    // Init the USART interface calling usart.c fonction
+    //MX_USART1_UART_Init();
+}
+
+void RF_Transmission_Task(void){
+	//HAL_UART_Transmit(&XBEE_RF_UART_HANDLE, (uint8_t *)&xbee_msg, sizeof(Xbee_Message), HAL_MAX_DELAY);
+}
+
+
+void XBeeRF_Transmit_test(uint8_t * message, int sendNB){
+	//Send test message
+			while (sendNB>0){
+				for (int i = 0; i <sizeof(message)+3; i++){
+					HAL_UART_Transmit(&XBEE_RF_UART_HANDLE, (uint8_t *)&message[i], 1, HAL_MAX_DELAY);
+				}
+				sendNB--;
+			}
+}
+
+void XBeeRF_Transmit_periodic_test(bool transmit_flag,uint8_t * message){
+	//Send test message at interval transmit_flag is set to TRUE
+			if (transmit_flag){
+				for (int i = 0; i <sizeof(message)+3; i++){
+					HAL_UART_Transmit(&XBEE_RF_UART_HANDLE, (uint8_t *)&message[i], 1, HAL_MAX_DELAY);
+				}
+				transmit_flag = false;
+			}
+}

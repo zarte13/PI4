@@ -1,0 +1,70 @@
+#include "XbeeRF.h"
+#include "RF_Reception.h"
+//
+//  CAN Messages receive variables
+//
+static uint8_t RF_DMA1[XBEE_RF_UART_DMA_SIZE];
+static uint8_t RF_DMA2[XBEE_RF_UART_DMA_SIZE];
+static uint8_t RF_DMA_TEST_BUFFER[] = {
+		0x7E, 0x00, 0x24, 0x00, 0x01, 0x00, 0x13, 0xA2,
+		0x00, 0x41, 0xB1, 0x8B, 0x37, 0x00, 0x7F, 0x2A,
+		0x9C, 0xDE, 0x11, 0x33, 0x55, 0x77, 0x99, 0xAA,
+		0xBB, 0xCC, 0xDD, 0xEE, 0xFF, 0x00, 0x11, 0x22,
+		0x33, 0x44, 0x55, 0xFF, 0xFF, 0xFF, 0xFF, 0xD3
+};
+static uint8_t* RF_DMA_ptr = RF_DMA1;
+static uint8_t RF_DMAGetPnt = 0;
+volatile static bool Rx_New_data = false;
+volatile static bool rx_DMA_Complete = false;
+
+
+static uint8_t RF_InputBuffer[XBEE_RF_RX_BUFFER_LENGTH];
+static uint32_t uartInputBufferPnt=0;
+uint8_t rx_uart_buffer[TEST_PACKET_SIZE];
+uint32_t last_receive = 0;
+
+// Private functions definitions
+void RF_Extract(uint8_t msgStartPointer, uint8_t* dmaList);
+
+eXBeeRF_Status_t RF_Status = IN_RANGE; //Default state
+//
+//  Debug variables
+//
+
+void XBeeRF_DMA_SW(void){
+
+	//HAL_UART_AbortReceive(&XBEE_RF_UART_HANDLE); // Technically if the callback for reception has been called, then reception is done
+	rx_DMA_Complete = true;
+
+	RF_DMAGetPnt = 0;
+
+	if (RF_DMA_ptr == RF_DMA1) RF_DMA_ptr = RF_DMA2;
+	else RF_DMA_ptr = RF_DMA1;
+	Rx_New_data = true;
+
+	__HAL_UART_FLUSH_DRREGISTER(&XBEE_RF_UART_HANDLE); // Clear the buffer to prevent overrun
+	// HAL_UART_Receive_DMA(&XBEE_RF_UART_HANDLE,RF_DMA_ptr,XBEE_RF_UART_DMA_SIZE); // start DMA reception
+}
+
+void RF_Reception_Init(void){
+    __HAL_UART_FLUSH_DRREGISTER(&XBEE_RF_UART_HANDLE);
+    HAL_UART_Receive_IT(&XBEE_RF_UART_HANDLE, rx_uart_buffer, sizeof(Xbee_message_receive));
+    printf("UART_Receive_IT status: %d\r\n", status);  // 0=OK, 1=ERROR, 2=BUSY, 3=TIMEOUT
+}
+
+void RF_Reception_Task(void){
+}
+
+eXBeeRF_Status_t XBeeRF_getStatus(void){
+	// return XBee900HP status
+	return RF_Status; // info about Xbee connection (in range or out of range)
+}
+
+void XBeeRF_ChangeStatus(eXBeeRF_Status_t STATE){
+	if (STATE == IN_RANGE){
+		last_receive = HAL_GetTick();
+	}
+	RF_Status = STATE;
+}
+
+

@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////////
+/// \file    XbeeRF.h
+/// \version Derni�re entr�e : 2020-04-05
+/// Copyright (c) 2020 Projet Esteban, voiture solaire, All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __XBEE_RF_RX_H_
+#define __XBEE_RF_RX_H_
+
+// Base include
+#include <stdint.h>
+#include <stdbool.h>
+#include "usart.h"
+#include "gpio.h"
+
+
+
+typedef enum XBeeRF_Status
+{
+		OUT_OF_RANGE 	= 0x00,
+		IN_RANGE			= 0x01
+}		eXBeeRF_Status_t;
+
+#define RF_UART_SIZE 60
+static uint8_t rx_uart_buffer[RF_UART_SIZE];
+
+
+void XBeeRF_ChangeStatus(eXBeeRF_Status_t STATE);
+eXBeeRF_Status_t XBeeRF_getStatus(void);
+
+
+void RF_Reception_Init(void);
+void RF_Reception_Task(void);
+void XBeeRF_DMA_SW(void);
+
+#endif
