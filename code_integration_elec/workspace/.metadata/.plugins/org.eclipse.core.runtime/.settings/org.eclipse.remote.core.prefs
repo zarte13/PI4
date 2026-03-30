@@ -34,6 +34,11 @@ connections/org.eclipse.remote.serial.core.connectionType/rsdtxfcgvjhbknj/serial
 connections/org.eclipse.remote.serial.core.connectionType/rsdtxfcgvjhbknj/serial.parity=0
 connections/org.eclipse.remote.serial.core.connectionType/rsdtxfcgvjhbknj/serial.portName=/dev/ttyACM0
 connections/org.eclipse.remote.serial.core.connectionType/rsdtxfcgvjhbknj/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/sedrftyghuijhlkvjghc/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/sedrftyghuijhlkvjghc/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/sedrftyghuijhlkvjghc/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/sedrftyghuijhlkvjghc/serial.portName=/dev/ttyUSB0
+connections/org.eclipse.remote.serial.core.connectionType/sedrftyghuijhlkvjghc/serial.stopBits=0
 connections/org.eclipse.remote.serial.core.connectionType/srdxfcgvhbjhugyftdhgxfchgvjhk/serial.baudRate=11
 connections/org.eclipse.remote.serial.core.connectionType/srdxfcgvhbjhugyftdhgxfchgvjhk/serial.byteSize=3
 connections/org.eclipse.remote.serial.core.connectionType/srdxfcgvhbjhugyftdhgxfchgvjhk/serial.parity=0
@@ -89,6 +94,11 @@ connections/org.eclipse.remote.serial.core.connectionType/wsredtryftguyhuijllkhv
 connections/org.eclipse.remote.serial.core.connectionType/wsredtryftguyhuijllkhvj/serial.parity=0
 connections/org.eclipse.remote.serial.core.connectionType/wsredtryftguyhuijllkhvj/serial.portName=/dev/ttyACM6
 connections/org.eclipse.remote.serial.core.connectionType/wsredtryftguyhuijllkhvj/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/wsredtyfctguyhiujoihuvjgcf/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/wsredtyfctguyhiujoihuvjgcf/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/wsredtyfctguyhiujoihuvjgcf/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/wsredtyfctguyhiujoihuvjgcf/serial.portName=/dev/ttyACM0
+connections/org.eclipse.remote.serial.core.connectionType/wsredtyfctguyhiujoihuvjgcf/serial.stopBits=0
 connections/org.eclipse.remote.serial.core.connectionType/wzrxdtcfyvguhbnj/serial.baudRate=11
 connections/org.eclipse.remote.serial.core.connectionType/wzrxdtcfyvguhbnj/serial.byteSize=3
 connections/org.eclipse.remote.serial.core.connectionType/wzrxdtcfyvguhbnj/serial.parity=0

@@ -28,6 +28,7 @@
 typedef struct{
 	uint32_t start_char;
 	float pression;
+	uint8_t valves;
 	uint32_t end_char;
 }Xbee_Message;
 

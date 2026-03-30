@@ -65,6 +65,7 @@ void SystemClock_Config(void);
 static ADS1015_Handle ads;
 static float voltage;
 static Xbee_message_receive receive_msg;
+Xbee_Message send_msg;
 volatile static bool new_rf_message = false;
 /* USER CODE END 0 */
 
@@ -105,6 +106,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
   XBeeRF_Init();
+  send_msg.start_char = 0xFEEDCAFE;
+  send_msg.end_char = 0xBEEFCACA;
 
   //XBee_StartReceive();
   //HAL_UART_Receive_IT(&huart1, &temp_byte, 1);
@@ -121,6 +124,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  GPIO_PinState valve1 = HAL_GPIO_ReadPin(SOLENOID_1_GPIO_Port, SOLENOID_1_Pin);
+	  GPIO_PinState valve2 = HAL_GPIO_ReadPin(SOLENOID_2_GPIO_Port, SOLENOID_2_Pin);
+
+	  switch ((valve1 << 1) | valve2)
+	  {
+	      case 0b00: send_msg.pression = 0;  break;
+	      case 0b01: send_msg.pression = 1;  break;
+	      case 0b10: send_msg.pression = 2;  break;
+	      case 0b11: send_msg.pression = 3;  break;
+	  }
 	  XBeeRF_Task();
 	  //HAL_Delay(1000);
 	  //printf("miaw\r\n");

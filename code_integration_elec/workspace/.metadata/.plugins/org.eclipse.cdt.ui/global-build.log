@@ -8054,3 +8054,177 @@ arm-none-eabi-size  integration_elec_slave.elf
   57248	    372	   9524	  67144	  10648	integration_elec_slave.elf
 Finished building: default.size.stdout
  
+19:24:41 **** Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/RF_Reception.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/RF_Reception.d" -MT"Core/Src/RF_Reception.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/RF_Reception.o"
+arm-none-eabi-gcc "../Core/Src/RF_Transmission.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/RF_Transmission.d" -MT"Core/Src/RF_Transmission.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/RF_Transmission.o"
+arm-none-eabi-gcc "../Core/Src/XbeeRF.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/XbeeRF.d" -MT"Core/Src/XbeeRF.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/XbeeRF.o"
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:27:13: warning: unused variable 'miaw' [-Wunused-variable]
+   27 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:26:13: warning: unused variable 'oof' [-Wunused-variable]
+   26 |         int oof = 69;
+      |             ^~~
+../Core/Src/XbeeRF.c:12:17: warning: 'RF_DMA_ptr' defined but not used [-Wunused-variable]
+   12 | static uint8_t* RF_DMA_ptr = RF_DMA1;
+      |                 ^~~~~~~~~~
+../Core/Src/RF_Reception.c:22:17: warning: 'uartInputBufferPnt' defined but not used [-Wunused-variable]
+   22 | static uint32_t uartInputBufferPnt=0;
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Reception.c:21:16: warning: 'RF_InputBuffer' defined but not used [-Wunused-variable]
+   21 | static uint8_t RF_InputBuffer[XBEE_RF_RX_BUFFER_LENGTH];
+      |                ^~~~~~~~~~~~~~
+../Core/Src/RF_Reception.c:8:16: warning: 'RF_DMA_TEST_BUFFER' defined but not used [-Wunused-variable]
+    8 | static uint8_t RF_DMA_TEST_BUFFER[] = {
+      |                ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:18:13: warning: 'canMsgSending' defined but not used [-Wunused-variable]
+   18 | static bool canMsgSending=false;
+      |             ^~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:17:16: warning: 'canMsgToSendPnt' defined but not used [-Wunused-variable]
+   17 | static uint8_t canMsgToSendPnt=0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:16:16: warning: 'canMsgToSendLength' defined but not used [-Wunused-variable]
+   16 | static uint8_t canMsgToSendLength=0;
+      |                ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:15:13: warning: 'canMsgBinary' defined but not used [-Wunused-variable]
+   15 | static char canMsgBinary[20];
+      |             ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  57720	    376	   9520	  67616	  10820	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+19:28:40 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/RF_Reception.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/RF_Reception.d" -MT"Core/Src/RF_Reception.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/RF_Reception.o"
+arm-none-eabi-gcc "../Core/Src/RF_Transmission.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/RF_Transmission.d" -MT"Core/Src/RF_Transmission.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/RF_Transmission.o"
+arm-none-eabi-gcc "../Core/Src/XbeeRF.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/XbeeRF.d" -MT"Core/Src/XbeeRF.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/XbeeRF.o"
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/XbeeRF.c:12:17: warning: 'RF_DMA_ptr' defined but not used [-Wunused-variable]
+   12 | static uint8_t* RF_DMA_ptr = RF_DMA1;
+      |                 ^~~~~~~~~~
+../Core/Src/RF_Reception.c:22:17: warning: 'uartInputBufferPnt' defined but not used [-Wunused-variable]
+   22 | static uint32_t uartInputBufferPnt=0;
+      |                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Reception.c:21:16: warning: 'RF_InputBuffer' defined but not used [-Wunused-variable]
+   21 | static uint8_t RF_InputBuffer[XBEE_RF_RX_BUFFER_LENGTH];
+      |                ^~~~~~~~~~~~~~
+../Core/Src/RF_Reception.c:8:16: warning: 'RF_DMA_TEST_BUFFER' defined but not used [-Wunused-variable]
+    8 | static uint8_t RF_DMA_TEST_BUFFER[] = {
+      |                ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:18:13: warning: 'canMsgSending' defined but not used [-Wunused-variable]
+   18 | static bool canMsgSending=false;
+      |             ^~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:17:16: warning: 'canMsgToSendPnt' defined but not used [-Wunused-variable]
+   17 | static uint8_t canMsgToSendPnt=0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:16:16: warning: 'canMsgToSendLength' defined but not used [-Wunused-variable]
+   16 | static uint8_t canMsgToSendLength=0;
+      |                ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:15:13: warning: 'canMsgBinary' defined but not used [-Wunused-variable]
+   15 | static char canMsgBinary[20];
+      |             ^~~~~~~~~~~~
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:27:13: warning: unused variable 'miaw' [-Wunused-variable]
+   27 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:26:13: warning: unused variable 'oof' [-Wunused-variable]
+   26 |         int oof = 69;
+      |             ^~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/home/emile/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/RF_Transmission.o: in function `RF_Transmission_Task':
+/home/emile/MEC8370/PI4/code_integration_elec/onboard/Debug/../Core/Src/RF_Transmission.c:31:(.text.RF_Transmission_Task+0x18): undefined reference to `xbee_msg'
+/home/emile/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/ads1015.o: in function `ADS1015_ToVoltage':
+/home/emile/MEC8370/PI4/code_integration_elec/onboard/Debug/../Core/Src/ads1015.c:83:(.text.ADS1015_ToVoltage+0x7c): undefined reference to `xbee_msg'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: integration_elec_slave.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:29:03 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/RF_Transmission.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/RF_Transmission.d" -MT"Core/Src/RF_Transmission.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/RF_Transmission.o"
+../Core/Src/RF_Transmission.c:18:13: warning: 'canMsgSending' defined but not used [-Wunused-variable]
+   18 | static bool canMsgSending=false;
+      |             ^~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:17:16: warning: 'canMsgToSendPnt' defined but not used [-Wunused-variable]
+   17 | static uint8_t canMsgToSendPnt=0;
+      |                ^~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:16:16: warning: 'canMsgToSendLength' defined but not used [-Wunused-variable]
+   16 | static uint8_t canMsgToSendLength=0;
+      |                ^~~~~~~~~~~~~~~~~~
+../Core/Src/RF_Transmission.c:15:13: warning: 'canMsgBinary' defined but not used [-Wunused-variable]
+   15 | static char canMsgBinary[20];
+      |             ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/home/emile/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/ads1015.o: in function `ADS1015_ToVoltage':
+/home/emile/MEC8370/PI4/code_integration_elec/onboard/Debug/../Core/Src/ads1015.c:83:(.text.ADS1015_ToVoltage+0x7c): undefined reference to `xbee_msg'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: integration_elec_slave.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:29:40 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/ads1015.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ads1015.d" -MT"Core/Src/ads1015.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ads1015.o"
+../Core/Src/ads1015.c: In function 'ADS1015_Init':
+../Core/Src/ads1015.c:27:13: warning: unused variable 'miaw' [-Wunused-variable]
+   27 |         int miaw = 0;
+      |             ^~~~
+../Core/Src/ads1015.c:26:13: warning: unused variable 'oof' [-Wunused-variable]
+   26 |         int oof = 69;
+      |             ^~~
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  57720	    360	   9536	  67616	  10820	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+19:33:16 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/home/emile/st/stm32cubeide_1.19.0/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.linux64_1.0.0.202410170706/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/home/emile/MEC8370/PI4/code_integration_elec/onboard/Debug/../Core/Src/main.c:124:(.text.main+0x168): undefined reference to `xbee_msg'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:68: integration_elec_slave.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:33:34 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  57876	    360	   9536	  67772	  108bc	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 
+19:35:06 **** Incremental Build of configuration Debug for project integration_elec_slave ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "integration_elec_slave.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/emile/MEC8370/PI4/code_integration_elec/onboard/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="integration_elec_slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: integration_elec_slave.elf
+ 
+arm-none-eabi-size  integration_elec_slave.elf 
+arm-none-eabi-objdump -h -S integration_elec_slave.elf  > "integration_elec_slave.list"
+   text	   data	    bss	    dec	    hex	filename
+  57896	    360	   9536	  67792	  108d0	integration_elec_slave.elf
+Finished building: default.size.stdout
+ 
+Finished building: integration_elec_slave.list
+ 

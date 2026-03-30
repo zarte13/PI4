@@ -16,7 +16,7 @@ static char canMsgBinary[20];
 static uint8_t canMsgToSendLength=0;
 static uint8_t canMsgToSendPnt=0;
 static bool canMsgSending=false;
-Xbee_Message xbee_msg = {0xBEEFCAFE, 0, 0xFEEDCAFE};
+extern Xbee_Message send_msg;
 
 
 void RF_Transmission_Init(void){
@@ -27,7 +27,7 @@ void RF_Transmission_Init(void){
 }
 
 void RF_Transmission_Task(void){
-	//HAL_UART_Transmit(&XBEE_RF_UART_HANDLE, (uint8_t *)&xbee_msg, sizeof(Xbee_Message), HAL_MAX_DELAY);
+	HAL_UART_Transmit(&XBEE_RF_UART_HANDLE, (uint8_t *)&send_msg, sizeof(Xbee_Message), HAL_MAX_DELAY);
 }
 
 

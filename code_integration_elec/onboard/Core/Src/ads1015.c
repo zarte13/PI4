@@ -5,7 +5,7 @@
 
 #include "ads1015.h"
 
-extern Xbee_Message xbee_msg;
+extern Xbee_Message send_msg;
 
 void ADS1015_Init(ADS1015_Handle *ads, I2C_HandleTypeDef *hi2c) {
     ads->hi2c  = hi2c;
@@ -78,6 +78,6 @@ float ADS1015_ToVoltage(int16_t raw) {
 	float tension = (float)raw * 0.002f*3/2;
 	float corrected_tension = tension - 0.5f;
 	float pression = corrected_tension/4 * 100;
-	xbee_msg.pression = pression;
+	send_msg.pression = pression;
     return pression;
 }
