@@ -45,12 +45,11 @@ typedef enum {
 
 typedef struct {
     I2C_HandleTypeDef *hi2c;
-    volatile ADS1015_State state;
-    int16_t result;
-
-    // Buffers DMA (doivent être en RAM non-cachée sur H7/F7, sinon RAM normale)
-    uint8_t tx_buf[3];
-    uint8_t rx_buf[2];
+    ADS1015_State      state;
+    volatile bool      data_ready_flag;  // ← nouveau
+    int16_t            result;
+    uint8_t            tx_buf[3];
+    uint8_t            rx_buf[2];
 } ADS1015_Handle;
 
 void     ADS1015_Init(ADS1015_Handle *ads, I2C_HandleTypeDef *hi2c);
@@ -58,7 +57,7 @@ void     ADS1015_StartConversion(ADS1015_Handle *ads);
 void     ADS1015_EXTI_Callback(ADS1015_Handle *ads);   // Appeler depuis HAL_GPIO_EXTI_Callback
 void     ADS1015_DMA_RxComplete(ADS1015_Handle *ads);  // Appeler depuis HAL_I2C_MemRxCpltCallback
 int16_t  ADS1015_GetResult(ADS1015_Handle *ads);
-float    ADS1015_ToVoltage(int16_t raw);
+float    ADS1015_PrepMsg(int16_t raw);
 
 
 

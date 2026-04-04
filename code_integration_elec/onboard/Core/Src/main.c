@@ -103,8 +103,10 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM2_Init();
   MX_USB_DEVICE_Init();
+  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   // todo : implémenter les séquences d'initialisation des différents modules
+  HAL_TIM_Base_Start_IT(&htim1);
   XBeeRF_Init();
   send_msg.start_char = 0xFEEDCAFE;
   send_msg.end_char = 0xBEEFCACA;
@@ -118,6 +120,9 @@ int main(void)
   ADS1015_Init(&ads, &hi2c1);
 
   ADS1015_StartConversion(&ads);
+
+  send_msg.start_char = 0xCACAFEED;
+  send_msg.end_char = 0xCAFEBEEF;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -129,21 +134,17 @@ int main(void)
 
 	  switch ((valve1 << 1) | valve2)
 	  {
-	      case 0b00: send_msg.pression = 0;  break;
-	      case 0b01: send_msg.pression = 1;  break;
-	      case 0b10: send_msg.pression = 2;  break;
-	      case 0b11: send_msg.pression = 3;  break;
+	      case 0b00: send_msg.valves = 0;  break;
+	      case 0b10: send_msg.valves = 1;  break;
+	      case 0b01: send_msg.valves = 2;  break;
+	      case 0b11: send_msg.valves = 3;  break;
 	  }
-	  XBeeRF_Task();
+
 	  //HAL_Delay(1000);
 	  //printf("miaw\r\n");
-	  if (ads.state == ADS1015_DATA_READY) {
-		  int16_t raw     = ADS1015_GetResult(&ads);
-		  voltage = ADS1015_ToVoltage(raw);
-
-		  // Traiter la donnée...
-		  // puis relancer
-		  ADS1015_StartConversion(&ads);
+	  if (ads.data_ready_flag) {
+	      int16_t raw = ADS1015_GetResult(&ads);
+	      ADS1015_PrepMsg(raw);
 	  }
 
 	  if (new_rf_message){
@@ -151,13 +152,13 @@ int main(void)
 
 	      if ((receive_msg.start_receive == 0xFEEDCACA) &&
 	          (receive_msg.fin_receive   == 0xBEEFCAFE)){
-	    	  printf("caliss:%lu",receive_msg.start_receive);
+	    	  printf("caliss:%X",receive_msg.start_receive);
 
 	          HAL_GPIO_WritePin(SOLENOID_1_GPIO_Port, SOLENOID_1_Pin,
-	              receive_msg.message_receive_valve1 == 1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	              receive_msg.message_receive_valve1 == 0xFFFFFFFF ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
 	          HAL_GPIO_WritePin(SOLENOID_2_GPIO_Port, SOLENOID_2_Pin,
-	              receive_msg.message_receive_valve2 == 1 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	              receive_msg.message_receive_valve2 == 0xFFFFFFFF ? GPIO_PIN_SET : GPIO_PIN_RESET);
 
 	          printf("valve1=%lu valve2=%lu\r\n",
 	                 receive_msg.message_receive_valve1,
@@ -165,6 +166,8 @@ int main(void)
 	      }
 	      else {
 	          printf("Message invalide\r\n");
+	          printf("Start : %X\n\r", receive_msg.start_receive);
+	          printf("end : %X\n\r", receive_msg.fin_receive);
 	      }
 	  }
     /* USER CODE END WHILE */
@@ -245,6 +248,16 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
         memcpy(&receive_msg, rx_uart_buffer, sizeof(Xbee_message_receive));
         new_rf_message = true;
         HAL_UART_Receive_IT(&XBEE_RF_UART_HANDLE, rx_uart_buffer, sizeof(Xbee_message_receive));
+    }
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if (htim->Instance == TIM1)
+    {
+    	XBeeRF_Task(); // LED toutes les 500ms
+        // ou set un flag :
+        // flag_500ms = 1;
     }
 }
 /* USER CODE END 4 */

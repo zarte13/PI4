@@ -58,6 +58,7 @@ void SysTick_Handler(void);
 void EXTI0_IRQHandler(void);
 void DMA1_Stream0_IRQHandler(void);
 void DMA1_Stream6_IRQHandler(void);
+void TIM1_UP_TIM10_IRQHandler(void);
 void TIM2_IRQHandler(void);
 void I2C1_EV_IRQHandler(void);
 void I2C1_ER_IRQHandler(void);

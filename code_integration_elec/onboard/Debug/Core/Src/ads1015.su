@@ -1,6 +1,6 @@
 ../Core/Src/ads1015.c:10:6:ADS1015_Init	40	static
-../Core/Src/ads1015.c:31:6:ADS1015_StartConversion	24	static
+../Core/Src/ads1015.c:31:6:ADS1015_StartConversion	32	static
 ../Core/Src/ads1015.c:48:6:ADS1015_EXTI_Callback	24	static
 ../Core/Src/ads1015.c:63:6:ADS1015_DMA_RxComplete	24	static
-../Core/Src/ads1015.c:71:9:ADS1015_GetResult	16	static
-../Core/Src/ads1015.c:76:7:ADS1015_ToVoltage	32	static
+../Core/Src/ads1015.c:75:9:ADS1015_GetResult	16	static
+../Core/Src/ads1015.c:80:7:ADS1015_PrepMsg	32	static

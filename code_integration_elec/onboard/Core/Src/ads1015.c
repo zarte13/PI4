@@ -38,7 +38,7 @@ void ADS1015_StartConversion(ADS1015_Handle *ads) {
 
     ads->state = ADS1015_WAITING_CONVERSION;
 
-    HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit_DMA(ads->hi2c, ADS1015_ADDR, ads->tx_buf, 3);
+    HAL_StatusTypeDef ret = HAL_I2C_Master_Transmit(ads->hi2c, ADS1015_ADDR, ads->tx_buf, 3, HAL_MAX_DELAY);
     if (ret != HAL_OK) {
         ads->state = ADS1015_IDLE;  // Breakpoint ici — I2C fail
     }
@@ -63,17 +63,21 @@ void ADS1015_EXTI_Callback(ADS1015_Handle *ads) {
 void ADS1015_DMA_RxComplete(ADS1015_Handle *ads) {
     if (ads->state != ADS1015_READING) return;
 
-    int16_t raw = ((int16_t)(ads->rx_buf[0] << 8) | ads->rx_buf[1]) >> 4; // 12 bits
+    int16_t raw = ((int16_t)(ads->rx_buf[0] << 8) | ads->rx_buf[1]) >> 4;
     ads->result = raw;
-    ads->state  = ADS1015_DATA_READY;
+
+    ads->state = ADS1015_IDLE;
+    ADS1015_StartConversion(ads);  // ← relancer ICI, state = WAITING avant que l'EXTI puisse firer
+
+    ads->data_ready_flag = true;   // ← setter le flag EN DERNIER
 }
 
 int16_t ADS1015_GetResult(ADS1015_Handle *ads) {
-    ads->state = ADS1015_IDLE;
-    return ads->result;
+    ads->data_ready_flag = false;     // acquitte seulement le flag
+    return ads->result;               // state déjà géré
 }
 
-float ADS1015_ToVoltage(int16_t raw) {
+float ADS1015_PrepMsg(int16_t raw) {
     // PGA = ±2.048V → LSB = 1 mV
 	float tension = (float)raw * 0.002f*3/2;
 	float corrected_tension = tension - 0.5f;
