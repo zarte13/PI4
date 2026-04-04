@@ -1,0 +1,29 @@
+////////////////////////////////////////////////////////////////////////////////
+/// \file    XbeeRF.h
+/// \version Derni�re entr�e : 2020-04-05
+/// Copyright (c) 2020 Projet Esteban, voiture solaire, All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef __XBEE_RF_TRANSMISSION_H_
+#define __XBEE_RF_TRANSMISSION_H_
+
+// Base include
+#include <stdint.h>
+#include <stdbool.h>
+#include "usart.h"
+#include "gpio.h"
+
+
+#include "XbeeRF.h"
+
+
+void RF_Transmission_Init(void);
+void RF_Transmission_Task(void);
+
+//void XBeeRF_PutCanMsg(sCANMessage_t* msg);
+
+void XBeeRF_Transmit_periodic_test(bool transmit_flag,uint8_t * message);
+void XBeeRF_Transmit_test(uint8_t * message, int sendNB);
+
+
+#endif

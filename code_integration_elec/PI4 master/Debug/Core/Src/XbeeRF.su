@@ -1,0 +1,2 @@
+../Core/Src/XbeeRF.c:14:6:XBeeRF_Init	8	static
+../Core/Src/XbeeRF.c:19:6:XBeeRF_Task	8	static
